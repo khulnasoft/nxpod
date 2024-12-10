@@ -1,0 +1,4 @@
+Contact: security@nxpod.io
+Preferred-Languages: en, de
+Canonical: https://nxpod.io/.well-known/security.txt
+Hiring: https://typefox.io/career
