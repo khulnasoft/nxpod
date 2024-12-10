@@ -151,7 +151,7 @@ export class InstallGithubApp extends React.Component<{}, InstallGithubAppState>
                 <Dialog open={this.state.showDialog === 'done'}>
                     <DialogTitle>Installation successful</DialogTitle>
                     <DialogContent>
-                        <DialogContentText>The GitHub app was installed successfully. Have a look at the <a href="https://www.nxpod.io/docs/prebuilds/" target="_blank" rel="noopener">documentation</a> to find out how to configure it.</DialogContentText>
+                        <DialogContentText>The GitHub app was installed successfully. Have a look at the <a href="https://www.nxpod.khulnasoft.com/docs/prebuilds/" target="_blank" rel="noopener">documentation</a> to find out how to configure it.</DialogContentText>
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={() => window.location.href = thisUrl.asDashboard().toString()} variant="outlined" color="secondary" autoFocus>Ok</Button>

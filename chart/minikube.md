@@ -16,10 +16,10 @@ minikube start --extra-config=apiserver.service-node-port-range=80-32767 --kuber
     apt-get update
     apt-get install dnsmasq
 
-    sudo vim /etc/NetworkManager/dnsmasq.d/nxpod.io-local
+    sudo vim /etc/NetworkManager/dnsmasq.d/nxpod.khulnasoft.com-local
 
-    address=/nxpod.io-local/<IP of minikube>
-    address=/host.nxpod.io-local/<Your network interface IP>
+    address=/nxpod.khulnasoft.com-local/<IP of minikube>
+    address=/host.nxpod.khulnasoft.com-local/<Your network interface IP>
     sudo service NetworkManager restart
     sudo service dnsmasq restart
      ```
@@ -27,8 +27,8 @@ minikube start --extra-config=apiserver.service-node-port-range=80-32767 --kuber
         1. `brew install dnsmasq`
         2. Add the following lines to the top of `/usr/local/etc/dnsmasq.conf` (for global installation) or `~/.homebrew/etc/dnsmasq.conf` (for installation in home directory):
            ```
-           address=/nxpod.io-local/<IP of minikube>
-           address=/host.nxpod.io-local/<Your network interface IP>
+           address=/nxpod.khulnasoft.com-local/<IP of minikube>
+           address=/host.nxpod.khulnasoft.com-local/<Your network interface IP>
            ```
         To get the IP of minikube: `minikube ip`
         To get your interface's IP use `ifconfig`. It is usually the IP of the `en0` (inet).
@@ -47,7 +47,7 @@ helm init
 
 Run
 ```
-helm repo add nxpod https://charts.nxpod.io
+helm repo add nxpod https://charts.nxpod.khulnasoft.com
 helm repo update
 ```
 
@@ -62,8 +62,8 @@ Create file `values.minikube.yaml` with the following contents:
 ```
 global:
   nxpod:
-    hostname: nxpod.io-local
-    localhostUrl: http://host.nxpod.io-local
+    hostname: nxpod.khulnasoft.com-local
+    localhostUrl: http://host.nxpod.khulnasoft.com-local
     certificates: {}
 ```
 

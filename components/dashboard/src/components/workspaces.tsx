@@ -227,7 +227,7 @@ class Workspaces extends React.Component<WorkspacesProps, WorkspacesState> {
 					<Paper style={{ padding: 30 }}>
 						<Typography variant="subheading">
 							<div>
-								No workspaces found. <a href="https://www.nxpod.io/docs/getting-started/" target="_blank">How do I create a new workspace?</a>
+								No workspaces found. <a href="https://www.nxpod.khulnasoft.com/docs/getting-started/" target="_blank">How do I create a new workspace?</a>
 							</div>
 						</Typography>
 					</Paper>
@@ -270,7 +270,7 @@ class Workspaces extends React.Component<WorkspacesProps, WorkspacesState> {
                 <Grid item xs={12}>
                     <Paper className="gc-message">
                         <Typography component="p" >
-                            Unused workspaces are automatically deleted after {this.state.configuration.daysBeforeGarbageCollection} days of inactivity. <a href="https://www.nxpod.io/docs/life-of-workspace/#garbage-collection">Learn more.</a>
+                            Unused workspaces are automatically deleted after {this.state.configuration.daysBeforeGarbageCollection} days of inactivity. <a href="https://www.nxpod.khulnasoft.com/docs/life-of-workspace/#garbage-collection">Learn more.</a>
                         </Typography>
                         <Button key='dismiss-gc-message' className='button' variant='outlined' color='secondary'
                             onClick={() => {

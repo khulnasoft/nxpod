@@ -80,7 +80,7 @@ export class TermsOfService extends React.Component<TermsOfServiceProps, TermsOf
                                     checked={this.state.acceptsTos}
                                     onChange={() => this.setState({ acceptsTos: !this.state.acceptsTos })} />
                                 <span>
-                                    I agree to the <a target="_blank" href="https://www.nxpod.io/terms/" rel="noopener">terms of service</a>
+                                    I agree to the <a target="_blank" href="https://www.nxpod.khulnasoft.com/terms/" rel="noopener">terms of service</a>
                                 </span>
                             </label></p>
                         </div>

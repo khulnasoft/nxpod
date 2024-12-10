@@ -3,7 +3,7 @@
     "schedulerName": "workspace-scheduler",
     "namespace": "staging-gpl-reschedule",
     "nodeLabelSelector": {
-      "nxpod.io/workload_workspace": "true"
+      "nxpod.khulnasoft.com/workload_workspace": "true"
     },
     "strategyName": "DensityAndExperience",
     "densityAndExperienceConfig": {
@@ -18,7 +18,7 @@
     "slotFactor": 6,
     "bufferFactor": 1,
     "nodeLabelSelector": {
-      "nxpod.io/workload_workspace": "true"
+      "nxpod.khulnasoft.com/workload_workspace": "true"
     },
     "schedulerName": "workspace-scheduler",
     "stage": "devstaging",

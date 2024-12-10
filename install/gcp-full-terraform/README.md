@@ -63,7 +63,7 @@ container_registry = {
 certificate_email = "certificates@your-domain.com"
 ```
 
-Several OAuth provider could be added ([docs.nxpod.io](https://www.nxpod.io/docs/self-hosted/latest/install/oauth/)).
+Several OAuth provider could be added ([docs.nxpod.khulnasoft.com](https://www.nxpod.khulnasoft.com/docs/self-hosted/latest/install/oauth/)).
 
 
 

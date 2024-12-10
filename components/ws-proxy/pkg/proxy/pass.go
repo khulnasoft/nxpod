@@ -127,7 +127,7 @@ func connectErrorToCause(err error) string {
 	return "unknown"
 }
 
-// withOnProxyErrorRedirectToWorkspaceStartHandler is an error handler that redirects to nxpod.io/start/#<wsid>
+// withOnProxyErrorRedirectToWorkspaceStartHandler is an error handler that redirects to nxpod.khulnasoft.com/start/#<wsid>
 func withOnProxyErrorRedirectToWorkspaceStartHandler(config *Config) proxyPassOpt {
 	return func(h *proxyPassConfig) {
 		h.ErrorHandler = func(w http.ResponseWriter, req *http.Request, err error) {

@@ -384,7 +384,7 @@ export class AuthProviders extends React.Component<AuthProvidersProps, AuthProvi
                     </Dialog>}
                 {ownAuthProviders.length === 0 && (
                     <Typography>
-                        Click "Add Git Provider" to enable access to your organization's repositories. <a href="https://www.nxpod.io/docs/configuration/" target="_blank" rel="noopener">Learn more</a>
+                        Click "Add Git Provider" to enable access to your organization's repositories. <a href="https://www.nxpod.khulnasoft.com/docs/configuration/" target="_blank" rel="noopener">Learn more</a>
                     </Typography>
                 )}
                 {ownAuthProviders.map(ap => {
@@ -498,12 +498,12 @@ export class AuthProviderComponent extends React.Component<AuthProviderComponent
             case "GitHub":
                 return (<Typography>
                     Go to <a href={`https://${host}/settings/developers`} target="_blank" rel="noopener">{host}/settings/developers</a> to setup the OAuth application.&nbsp;
-                    <a href="https://www.nxpod.io/docs/github-integration/#oauth-application" target="_blank" rel="noopener">Learn more</a>.
+                    <a href="https://www.nxpod.khulnasoft.com/docs/github-integration/#oauth-application" target="_blank" rel="noopener">Learn more</a>.
                     </Typography>);
             case "GitLab":
                 return (<Typography>
                     Go to <a href={`https://${host}/profile/applications`} target="_blank" rel="noopener">{host}/profile/applications</a> to setup the OAuth application.&nbsp;
-                    <a href="https://www.nxpod.io/docs/gitlab-integration/#oauth-application" target="_blank" rel="noopener">Learn more</a>.
+                    <a href="https://www.nxpod.khulnasoft.com/docs/gitlab-integration/#oauth-application" target="_blank" rel="noopener">Learn more</a>.
                     </Typography>);
             default: return undefined;
         }

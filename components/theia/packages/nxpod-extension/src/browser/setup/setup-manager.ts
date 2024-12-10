@@ -198,7 +198,7 @@ export class SetupManagerImpl implements SetupManager, FS, CommandContribution {
                     await this.git.commit(repo, 
 `Fully automate dev setup with Nxpod
 
-This commit implements a fully-automated development setup using Nxpod.io, an
+This commit implements a fully-automated development setup using nxpod.khulnasoft.com, an
 online IDE for GitLab, GitHub, and Bitbucket that enables Dev-Environments-As-Code.
 This makes it easy for anyone to get a ready-to-code workspace for any branch,
 issue or pull request almost instantly with a single click.
@@ -489,7 +489,7 @@ issue or pull request almost instantly with a single click.
 # For example "bastet", a command-line tetris clone:
 # RUN brew install bastet
 #
-# More information: https://www.nxpod.io/docs/config-docker/
+# More information: https://www.nxpod.khulnasoft.com/docs/config-docker/
 `);
                     }
                     progress.report({

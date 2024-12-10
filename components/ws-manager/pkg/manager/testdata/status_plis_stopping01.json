@@ -79,7 +79,7 @@
                         },
                         {
                             "name": "NXPOD_HOST",
-                            "value": "nxpod.io"
+                            "value": "nxpod.khulnasoft.com"
                         },
                         {
                             "name": "NXPOD_INTERVAL",

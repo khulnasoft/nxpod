@@ -16,7 +16,7 @@ spec:
       # not {{ template "nxpod.fullname" . }} here because the workspaces know nothing about the helm deployment
       app: nxpod
       component: workspace
-      nxpod.io/networkpolicy: default
+      nxpod.khulnasoft.com/networkpolicy: default
   policyTypes:
   - Ingress
   - Egress

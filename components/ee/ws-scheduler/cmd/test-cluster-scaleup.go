@@ -28,7 +28,7 @@ var testPodIdentifier map[string]string = map[string]string{
 	"component": "test-cluster-scaleup",
 }
 var workspaceNodeIdentifier map[string]string = map[string]string{
-	"nxpod.io/workload_workspace": "true",
+	"nxpod.khulnasoft.com/workload_workspace": "true",
 }
 
 const testNamespace = "default"
@@ -263,7 +263,7 @@ func startTestPod(clientSet *kubernetes.Clientset, nr int, suffix string) error 
 							corev1.NodeSelectorTerm{
 								MatchExpressions: []corev1.NodeSelectorRequirement{
 									corev1.NodeSelectorRequirement{
-										Key:      "nxpod.io/workload_workspace",
+										Key:      "nxpod.khulnasoft.com/workload_workspace",
 										Operator: corev1.NodeSelectorOpIn,
 										Values:   []string{"true"},
 									},

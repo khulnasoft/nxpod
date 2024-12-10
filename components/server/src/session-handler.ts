@@ -56,7 +56,7 @@ export class SessionHandlerProvider {
             secure: false,                // default, TODO SSL! Config proxy
             maxAge: env.sessionMaxAgeMs,  // configured in Helm chart, defaults to 3 days.
             sameSite: "lax",              // default: true. "Lax" needed for OAuth.
-            domain: `${domain}`           // Use cookie for base domain (works for *.staging.nxpod.io because of the name, see below)
+            domain: `${domain}`           // Use cookie for base domain (works for *.staging.nxpod.khulnasoft.com because of the name, see below)
             // Otherwise, clients (in this case Chrome) may ignore (as in: save it, but don't send it on consequent requests) the 'Set-Cookie:...' send with a redirect (302, to github oauth)
             // For details, see:
             // - RFC draft sameSite: http://httpwg.org/http-extensions/draft-ietf-httpbis-cookie-same-site.html

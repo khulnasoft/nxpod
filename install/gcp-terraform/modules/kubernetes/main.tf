@@ -87,8 +87,8 @@ resource "google_container_node_pool" "nxpod_cluster" {
     }
 
     labels = {
-      "nxpod.io/workload_meta"      = "true"
-      "nxpod.io/workload_workspace" = "true"
+      "nxpod.khulnasoft.com/workload_meta"      = "true"
+      "nxpod.khulnasoft.com/workload_workspace" = "true"
     }
 
     image_type = var.kubernetes.node_pool.image_type

@@ -46,8 +46,8 @@ data:
     echo ""
 
     if [ -z "$(ls /root/chart)" ]; then
-      echo "Installing Nxpod from charts.nxpod.io"
-      helm repo add nxpod https://charts.nxpod.io
+      echo "Installing Nxpod from charts.nxpod.khulnasoft.com"
+      helm repo add nxpod https://charts.nxpod.khulnasoft.com
       helm repo update
       helm install nxpod nxpod/nxpod --timeout 60m --version "$NXPOD_CHART_VERSION" --values /root/install/values.yaml
     else

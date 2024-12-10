@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "ba66e4d4-3eae-4c9c-83da-75b6dbc2f592",
@@ -24,7 +24,7 @@
         "nxpod/id": "f9d04251-f057-4287-b7b1-956093140c5d",
         "nxpod/servicePrefix": "ba66e4d4-3eae-4c9c-83da-75b6dbc2f592",
         "nxpod/traceid": "AAAAAAAAAADhGTsriIyxPTTDrd1As99VVqvzdzhPjzsBAAAAAA==",
-        "nxpod/url": "http://ba66e4d4-3eae-4c9c-83da-75b6dbc2f592.cw-minio-core.staging.nxpod.io",
+        "nxpod/url": "http://ba66e4d4-3eae-4c9c-83da-75b6dbc2f592.cw-minio-core.staging.nxpod.khulnasoft.com",
         "nxpod/never-ready": "true",
         "prometheus.io/path": "/metrics",
         "prometheus.io/port": "23000",
@@ -85,11 +85,11 @@
             },
             {
               "name": "NXPOD_HOST",
-              "value": "http://cw-minio-core.staging.nxpod.io"
+              "value": "http://cw-minio-core.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_WORKSPACE_URL",
-              "value": "http://ba66e4d4-3eae-4c9c-83da-75b6dbc2f592.cw-minio-core.staging.nxpod.io"
+              "value": "http://ba66e4d4-3eae-4c9c-83da-75b6dbc2f592.cw-minio-core.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_GIT_USER_NAME",
@@ -205,11 +205,11 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/theia.cw-minio-core.24",
+                    "key": "nxpod.khulnasoft.com/theia.cw-minio-core.24",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   }
                 ]

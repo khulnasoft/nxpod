@@ -18,7 +18,7 @@ export function addUserInfoToSearchResult(searchResultWidget: VSXExtensionsWidge
         yield* originalGetElements();
         yield {
             render: () => <div>
-                Not found what you are looking for? <a href="https://www.nxpod.io/docs/vscode-extensions/#where-do-i-find-extensions" target="_blank">Learn More</a>
+                Not found what you are looking for? <a href="https://www.nxpod.khulnasoft.com/docs/vscode-extensions/#where-do-i-find-extensions" target="_blank">Learn More</a>
             </div>
         };
     }

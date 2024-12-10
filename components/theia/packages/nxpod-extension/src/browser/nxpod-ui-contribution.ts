@@ -298,10 +298,10 @@ export class NxpodUiContribution implements FrontendApplicationContribution, Com
             }
         });
         commands.registerCommand(NxpodCommands.OPEN_COMMUNITY, {
-            execute: () => this.windowService.openNewWindow("https://community.nxpod.io/")
+            execute: () => this.windowService.openNewWindow("https://community.nxpod.khulnasoft.com/")
         });
         commands.registerCommand(NxpodCommands.OPEN_DOCUMENTATION, {
-            execute: () => this.windowService.openNewWindow("https://www.nxpod.io/docs/")
+            execute: () => this.windowService.openNewWindow("https://www.nxpod.khulnasoft.com/docs/")
         });
         commands.registerCommand(NxpodCommands.REPORT_ISSUE, {
             execute: () => this.windowService.openNewWindow("https://github.com/khulnasoft/nxpod/issues/new/choose")

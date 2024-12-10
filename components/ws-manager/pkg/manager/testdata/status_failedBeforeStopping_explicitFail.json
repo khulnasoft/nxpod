@@ -12,7 +12,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "eb694666-269a-4d8c-a031-3cd6ea8135f9",
@@ -28,7 +28,7 @@
         "nxpod/id": "4f8ea7b8-b87d-42f2-b8dd-1a32fdbdf0d4",
         "nxpod/servicePrefix": "eb694666-269a-4d8c-a031-3cd6ea8135f9",
         "nxpod/traceid": "AAAAAAAAAABTzL35m/Bap1e6UVPvjbr1azpj2MJJhIkBAAAAAA==",
-        "nxpod/url": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.io",
+        "nxpod/url": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.khulnasoft.com",
         "nxpod/never-ready": "true",
         "prometheus.io/path": "/metrics",
         "prometheus.io/port": "23000",
@@ -89,7 +89,7 @@
             },
             {
               "name": "NXPOD_HOST",
-              "value": "http://gh-2510.staging.nxpod.io"
+              "value": "http://gh-2510.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_WSSYNC_APITOKEN",
@@ -101,7 +101,7 @@
             },
             {
               "name": "NXPOD_WORKSPACE_URL",
-              "value": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.io"
+              "value": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_GIT_USER_NAME",
@@ -225,7 +225,7 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"
