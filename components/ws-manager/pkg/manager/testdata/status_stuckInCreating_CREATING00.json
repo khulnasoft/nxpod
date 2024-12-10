@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "afccd13d-fc9c-4fd2-a27e-3bd8f4e138f6",
@@ -27,7 +27,7 @@
         "nxpod/ready": "true",
         "nxpod/servicePrefix": "afccd13d-fc9c-4fd2-a27e-3bd8f4e138f6",
         "nxpod/timedout": "workspace timed out after I've meddled with this test data set",
-        "nxpod/url": "https://afccd13d-fc9c-4fd2-a27e-3bd8f4e138f6.ws-eu01.nxpod.io",
+        "nxpod/url": "https://afccd13d-fc9c-4fd2-a27e-3bd8f4e138f6.ws-eu01.nxpod.khulnasoft.com",
         "kubernetes.io/psp": "default-ns-workspace",
         "prometheus.io/path": "/metrics",
         "prometheus.io/port": "23000",
@@ -154,15 +154,15 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/theia.master.2424",
+                    "key": "nxpod.khulnasoft.com/theia.master.2424",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"

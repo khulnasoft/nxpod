@@ -33,7 +33,7 @@ func forTestingOnlyGetManager(t *testing.T, objects ...runtime.Object) *Manager 
 		HeartbeatInterval:        util.Duration(30 * time.Second),
 		TheiaHostPath:            "/tmp/theia/theia-xyz",
 		WorkspaceHostPath:        "/tmp/workspaces",
-		NxpodHostURL:             "nxpod.io",
+		NxpodHostURL:             "nxpod.khulnasoft.com",
 		WorkspaceURLTemplate:     "{{ .ID }}-{{ .Prefix }}-{{ .Host }}",
 		WorkspacePortURLTemplate: "{{ .WorkspacePort }}-{{ .ID }}-{{ .Prefix }}-{{ .Host }}",
 		RegistryFacadeHost:       "registry-facade:8080",

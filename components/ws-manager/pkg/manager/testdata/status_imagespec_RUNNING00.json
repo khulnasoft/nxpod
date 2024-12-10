@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "db334047-3c4b-49cc-a5fb-a089bff656e0",
@@ -49,7 +49,7 @@
       "containers": [
         {
           "name": "workspace",
-          "image": "reg.nxpod.io:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0",
+          "image": "reg.nxpod.khulnasoft.com:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0",
           "ports": [
             {
               "containerPort": 23000,
@@ -212,11 +212,11 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"
@@ -312,8 +312,8 @@
           "lastState": {},
           "ready": true,
           "restartCount": 0,
-          "image": "reg.nxpod.io:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0",
-          "imageID": "reg.nxpod.io:30056/c/pmrgeir2ejsxklthmnzc42lpf5tws5dqn5sc2zdfoyxxo33snnzxayldmuwws3lbm5sxgorrme4toodcmjrtanrrgyzdszlbmyydeojyme3gmztemu4gkojuga2wmm3eguydgnbzmvswcmrrmuytcnrqmzsdcn3fgfqwmzlghfrtkit5@sha256:01f33e29f121604e4a62a82e41f941d49699d913fbd31332912eda0d21428927",
+          "image": "reg.nxpod.khulnasoft.com:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0",
+          "imageID": "reg.nxpod.khulnasoft.com:30056/c/pmrgeir2ejsxklthmnzc42lpf5tws5dqn5sc2zdfoyxxo33snnzxayldmuwws3lbm5sxgorrme4toodcmjrtanrrgyzdszlbmyydeojyme3gmztemu4gkojuga2wmm3eguydgnbzmvswcmrrmuytcnrqmzsdcn3fgfqwmzlghfrtkit5@sha256:01f33e29f121604e4a62a82e41f941d49699d913fbd31332912eda0d21428927",
           "containerID": "containerd://11db5d6ccf9ec55e232b1bb3cbb333b8fb2e2db20401b095b5f31aef69384051"
         }
       ],
@@ -455,7 +455,7 @@
         "fieldPath": "spec.containers{workspace}"
       },
       "reason": "Pulling",
-      "message": "Pulling image \"reg.nxpod.io:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0\"",
+      "message": "Pulling image \"reg.nxpod.khulnasoft.com:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0\"",
       "source": {
         "component": "kubelet",
         "host": "gke-nxpod-dev-worker-pool-1-3df476cf-qxwr"
@@ -487,7 +487,7 @@
         "fieldPath": "spec.containers{workspace}"
       },
       "reason": "Pulled",
-      "message": "Successfully pulled image \"reg.nxpod.io:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0\"",
+      "message": "Successfully pulled image \"reg.nxpod.khulnasoft.com:30056/i/db334047-3c4b-49cc-a5fv-a089bff65e0\"",
       "source": {
         "component": "kubelet",
         "host": "gke-nxpod-dev-worker-pool-1-3df476cf-qxwr"

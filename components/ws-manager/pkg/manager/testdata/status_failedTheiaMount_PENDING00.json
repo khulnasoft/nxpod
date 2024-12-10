@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3",
@@ -22,7 +22,7 @@
         "nxpod/id": "b3242d9b-6920-41b5-8e72-c3d5637ca148",
         "nxpod/servicePrefix": "d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3",
         "nxpod/traceid": "AAAAAAAAAAAKKiUk7m4PY1BOxC/NSqfQCUjtNDaUFjkBAAAAAA==",
-        "nxpod/url": "http://d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3.ws-eu.cw-fail-on-mount-failure.staging.nxpod.io",
+        "nxpod/url": "http://d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3.ws-eu.cw-fail-on-mount-failure.staging.nxpod.khulnasoft.com",
         "nxpod/never-ready": "true",
         "prometheus.io/path": "/metrics",
         "prometheus.io/port": "23000",
@@ -98,7 +98,7 @@
             },
             {
               "name": "NXPOD_HOST",
-              "value": "http://cw-fail-on-mount-failure.staging.nxpod.io"
+              "value": "http://cw-fail-on-mount-failure.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_WSSYNC_APITOKEN",
@@ -110,7 +110,7 @@
             },
             {
               "name": "NXPOD_WORKSPACE_URL",
-              "value": "http://d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3.ws-eu.cw-fail-on-mount-failure.staging.nxpod.io"
+              "value": "http://d4562d0d-46ae-4a4b-b0a4-a5e94ea4a2f3.ws-eu.cw-fail-on-mount-failure.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_INTERVAL",
@@ -222,7 +222,7 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"

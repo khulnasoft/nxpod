@@ -32,7 +32,7 @@ data:
             "slotFactor": {{ $comp.scalerConfig.slotFactor }},
             "bufferFactor": {{ $comp.scalerConfig.bufferFactor }},
             "nodeLabelSelector": {
-                "nxpod.io/workload_workspace": "true"
+                "nxpod.khulnasoft.com/workload_workspace": "true"
             },
             "schedulerName": "{{ .Values.workspaceScheduler }}",
             "stage": "{{ .Values.installation.stage }}",

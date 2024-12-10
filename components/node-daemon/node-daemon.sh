@@ -6,7 +6,7 @@
 
 # 1. At this point we'll have copied Theia to the node. We must mark the node with the Theia label so that workspaces get scheduled to it.
 for i in $(seq 1 10); do
-    if kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.io/theia.'$VERSION'": "available"}}}'; then
+    if kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.khulnasoft.com/theia.'$VERSION'": "available"}}}'; then
         echo "Theia (version $VERSION) became available - we've marked the node"
         break
     fi
@@ -24,7 +24,7 @@ done
 # 2. We have to ensure this node has a ws-sync running. To this end we wait for ws-sync to become available and then mark the node.
 while true; do
     if kubectl get pods --field-selector spec.nodeName=$EXECUTING_NODE_NAME -l component=ws-sync | grep Running &>/dev/null; then
-        kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.io/ws-sync": "available"}}}'
+        kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.khulnasoft.com/ws-sync": "available"}}}'
         break
     fi
     sleep 1

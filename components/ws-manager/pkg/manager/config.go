@@ -61,7 +61,7 @@ type Configuration struct {
 	TheiaHostPath string `json:"theiaHostPath"`
 	// HeartbeatInterval is the time in seconds in which Theia sends a heartbeat if the user is active
 	HeartbeatInterval util.Duration `json:"heartbeatInterval"`
-	// Is the URL under which Nxpod is installed (e.g. https://nxpod.io)
+	// Is the URL under which Nxpod is installed (e.g. https://nxpod.khulnasoft.com)
 	NxpodHostURL string `json:"hostURL"`
 	// EventTraceLog is a path to file where we'll write the monitor event trace log to
 	EventTraceLog string `json:"eventTraceLog,omitempty"`
@@ -202,7 +202,7 @@ var validWorkspaceURLTemplate = validation.By(func(o interface{}) error {
 		return xerrors.Errorf("field should be string")
 	}
 
-	wsurl, err := renderWorkspaceURL(s, "foo", "bar", "nxpod.io")
+	wsurl, err := renderWorkspaceURL(s, "foo", "bar", "nxpod.khulnasoft.com")
 	if err != nil {
 		return xerrors.Errorf("cannot render URL: %w", err)
 	}

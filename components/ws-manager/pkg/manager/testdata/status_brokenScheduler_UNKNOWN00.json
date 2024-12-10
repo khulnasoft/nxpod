@@ -10,7 +10,7 @@
             "labels": {
                 "app": "nxpod",
                 "component": "workspace",
-                "nxpod.io/networkpolicy": "default",
+                "nxpod.khulnasoft.com/networkpolicy": "default",
                 "gpwsman": "true",
                 "headless": "false",
                 "metaID": "a9949b21-d6d8-443a-85f5-44f5ac3065c0",
@@ -22,7 +22,7 @@
                 "nxpod/id": "fb291b69-7bbc-4865-a432-33f558f20091",
                 "nxpod/servicePrefix": "a9949b21-d6d8-443a-85f5-44f5ac3065c0",
                 "nxpod/traceid": "AAAAAAAAAAC0nYySXpfHcnzoa970pCkZBtBSaqGr/6oBAAAAAA==",
-                "nxpod/url": "http://a9949b21-d6d8-443a-85f5-44f5ac3065c0.ws-eu.cw-scheduler.staging.nxpod.io",
+                "nxpod/url": "http://a9949b21-d6d8-443a-85f5-44f5ac3065c0.ws-eu.cw-scheduler.staging.nxpod.khulnasoft.com",
                 "nxpod/never-ready": "true",
                 "prometheus.io/path": "/metrics",
                 "prometheus.io/port": "23000",
@@ -98,7 +98,7 @@
                         },
                         {
                             "name": "NXPOD_HOST",
-                            "value": "http://cw-scheduler.staging.nxpod.io"
+                            "value": "http://cw-scheduler.staging.nxpod.khulnasoft.com"
                         },
                         {
                             "name": "NXPOD_WSSYNC_APITOKEN",
@@ -110,7 +110,7 @@
                         },
                         {
                             "name": "NXPOD_WORKSPACE_URL",
-                            "value": "http://a9949b21-d6d8-443a-85f5-44f5ac3065c0.ws-eu.cw-scheduler.staging.nxpod.io"
+                            "value": "http://a9949b21-d6d8-443a-85f5-44f5ac3065c0.ws-eu.cw-scheduler.staging.nxpod.khulnasoft.com"
                         },
                         {
                             "name": "USER_ENV_NXPOD_TASKS",
@@ -226,7 +226,7 @@
                             {
                                 "matchExpressions": [
                                     {
-                                        "key": "nxpod.io/workload_workspace",
+                                        "key": "nxpod.khulnasoft.com/workload_workspace",
                                         "operator": "In",
                                         "values": [
                                             "true"

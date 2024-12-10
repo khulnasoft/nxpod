@@ -17,7 +17,7 @@ export class NoReferrer extends React.Component<{}, {}> {
             <div className="sorry">
                 <h3>No referrer found 😳</h3>
                 <h2>It looks like you want to start a workspace, but your referrer is empty</h2>
-                <p>Maybe your GitHub repository is private? In this case you have to use the <strong>nxpod.io/#</strong> prefix.</p>
+                <p>Maybe your GitHub repository is private? In this case you have to use the <strong>nxpod.khulnasoft.com/#</strong> prefix.</p>
                 <p style={{ marginTop: '10px' }}>See <a href="https://github.com/khulnasoft/nxpod/issues/688#issuecomment-514564728">here</a> for details.</p>
                 <Button
                     variant='outlined' color='secondary' onClick={() => window.history.back()}

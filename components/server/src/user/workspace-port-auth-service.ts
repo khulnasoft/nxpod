@@ -91,7 +91,7 @@ export class WorkspacePortAuthorizationService {
                 }
             }
         } else {
-            // The default case for nxpod.io
+            // The default case for nxpod.khulnasoft.com
             if (hasValidCookieForWorkspace || wsAndPortConfig.isPortPublic || wsAndPortConfig.isWsShared) {
                 access = true;
             }

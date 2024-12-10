@@ -19,7 +19,7 @@ import { BrandingParser } from './branding-parser';
 export class Env extends AbstractComponentEnv {
     readonly serverVersion = process.env.SERVER_VERSION || 'dev';
 
-    readonly hostUrl = new NxpodHostUrl(process.env.HOST_URL || 'https://nxpod.io');
+    readonly hostUrl = new NxpodHostUrl(process.env.HOST_URL || 'https://nxpod.khulnasoft.com');
     readonly localhostUrl?: NxpodHostUrl = process.env.LOCALHOST_URL ? new NxpodHostUrl(process.env.LOCALHOST_URL) : undefined;
 
     readonly theiaPort = Number.parseInt(process.env.THEIA_PORT || '23000', 10) || 23000;

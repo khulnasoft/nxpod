@@ -19,7 +19,7 @@ export class NxpodHostUrl {
 
     constructor(urlParam?: string | URL) {
         if (urlParam === undefined || typeof urlParam === 'string') {
-            this.url = new URL(urlParam || 'https://nxpod.io');
+            this.url = new URL(urlParam || 'https://nxpod.khulnasoft.com');
             this.url.search = '';
             this.url.hash = '';
             this.url.pathname = '';

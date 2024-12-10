@@ -3,7 +3,7 @@
 #  1. `gcloud auth login <your-typefox-email>` and authenticate
 #  2. `gcloud auth application-default login` and authenticate
 #  3. `cat ~/.config/gcloud/application_default_credentials.json` and copy the output
-#  4. Go to https://nxpod.io/environment-variables/ and create:
+#  4. Go to https://nxpod.khulnasoft.com/environment-variables/ and create:
 #     - name: GCP_ADC_FILE
 #     - value: paste-the-output
 #     - repo: typefox/nxpod-core

@@ -62,7 +62,7 @@ func forIntegrationTestGetManager(t *testing.T) *Manager {
 		HeartbeatInterval:        util.Duration(30 * time.Second),
 		TheiaHostPath:            "/tmp",
 		WorkspaceHostPath:        "/tmp",
-		NxpodHostURL:             "nxpod.io",
+		NxpodHostURL:             "nxpod.khulnasoft.com",
 		WorkspaceURLTemplate:     "{{ .ID }}-{{ .Prefix }}-{{ .Host }}",
 		WorkspacePortURLTemplate: "{{ .Host }}:{{ .IngressPort }}",
 		RegistryFacadeHost:       "registry-facade:8080",
@@ -199,14 +199,14 @@ func (r *StatusRecoder) Log() []api.WorkspaceStatus {
 func ensureIntegrationTestTheiaLabelOnNodes(client kubernetes.Interface, namespace string) (version string, err error) {
 	version = "wsman-test"
 
-	nodes, err := client.CoreV1().Nodes().List(metav1.ListOptions{LabelSelector: fmt.Sprintf("nxpod.io/theia.%s", version)})
+	nodes, err := client.CoreV1().Nodes().List(metav1.ListOptions{LabelSelector: fmt.Sprintf("nxpod.khulnasoft.com/theia.%s", version)})
 	if err != nil {
-		log.WithError(err).Warnf("cannot list nodes to check if one has the nxpod.io/theia.%s label", version)
+		log.WithError(err).Warnf("cannot list nodes to check if one has the nxpod.khulnasoft.com/theia.%s label", version)
 		return "wsman-test", nil
 	}
 
 	if len(nodes.Items) == 0 {
-		return "", fmt.Errorf("no nodes with the nxpod.io/theia.%s label available", version)
+		return "", fmt.Errorf("no nodes with the nxpod.khulnasoft.com/theia.%s label available", version)
 	}
 
 	return

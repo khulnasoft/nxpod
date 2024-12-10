@@ -66,12 +66,12 @@ Create a Nxpod configuration for this project.
 				d = []byte(`image:
   file: .nxpod.Dockerfile
 
-# List the ports you want to expose and what to do when they are served. See https://www.nxpod.io/docs/config-ports/
+# List the ports you want to expose and what to do when they are served. See https://www.nxpod.khulnasoft.com/docs/config-ports/
 ports:
   - port: 3000
     onOpen: open-preview
 
-# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.nxpod.io/docs/config-start-tasks/
+# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.nxpod.khulnasoft.com/docs/config-start-tasks/
 tasks:
   - init: echo 'init script' # runs during prebuild
     command: echo 'start script'
@@ -126,7 +126,7 @@ USER nxpod
 #     sudo apt-get install -yq bastet && \
 #     sudo rm -rf /var/lib/apt/lists/*
 #
-# More information: https://www.nxpod.io/docs/config-docker/
+# More information: https://www.nxpod.khulnasoft.com/docs/config-docker/
 `), 0644); err != nil {
 					log.Fatal(err)
 				}

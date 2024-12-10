@@ -15,7 +15,7 @@ variable "helm" {
     chart      = string
   })
   default = {
-    repository = "https://charts.nxpod.io"
+    repository = "https://charts.nxpod.khulnasoft.com"
     chart      = "nxpod"
   }
 }

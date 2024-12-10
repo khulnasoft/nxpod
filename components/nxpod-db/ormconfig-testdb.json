@@ -1,7 +1,7 @@
 {
     "type": "mysql",
     "database": "nxpod",
-    "host": "nxpod.io-local",
+    "host": "nxpod.khulnasoft.com-local",
     "username": "nxpod",
     "password": "test",
     "synchronize": false,

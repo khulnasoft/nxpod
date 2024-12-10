@@ -28,12 +28,12 @@
       }
     },
     "heartbeatInterval": "30s",
-    "hostURL": "nxpod.io",
+    "hostURL": "nxpod.khulnasoft.com",
     "initProbe": {
       "retries": 10,
       "timeout": "10s"
     },
-    "urlTemplate": "http://{{ .Prefix }}.ws-eu.cw-ws-manager.staging.nxpod.io",
+    "urlTemplate": "http://{{ .Prefix }}.ws-eu.cw-ws-manager.staging.nxpod.khulnasoft.com",
     "workspaceHostPath": "/tmp/workspaces",
     "theiaHostPath": "/tmp/theia-xyz",
     "timeouts": {

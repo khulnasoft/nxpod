@@ -6,43 +6,26 @@ go 1.13
 replace github.com/docker/distribution v2.7.1+incompatible => github.com/docker/distribution v2.7.1-0.20190205005809-0d3efadf0154+incompatible // leeway ignore
 
 require (
-	cloud.google.com/go v0.48.0 // indirect
-	github.com/Microsoft/hcsshim v0.8.7 // indirect
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
-	github.com/containerd/containerd v1.3.2
-	github.com/containerd/continuity v0.0.0-20200107194136-26c1120b8d41 // indirect
-	github.com/containerd/fifo v0.0.0-20191213151349-ff969a566b00 // indirect
-	github.com/containerd/ttrpc v0.0.0-20200121165050-0be804eadb15 // indirect
-	github.com/containerd/typeurl v0.0.0-20200115183213-fe1d0d650e42
-	github.com/docker/distribution v2.7.1+incompatible // indirect
-	github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c // indirect
+	github.com/containerd/containerd v1.6.26
+	github.com/containerd/typeurl v1.0.2
 	github.com/go-ole/go-ole v1.2.4 // indirect
-	github.com/gogo/googleapis v1.3.2 // indirect
-	github.com/golang/protobuf v1.3.3
-	github.com/google/go-cmp v0.3.1
+	github.com/golang/protobuf v1.5.3
+	github.com/google/go-cmp v0.5.9
 	github.com/google/tcpproxy v0.0.0-20200125044825-b6bb9b5b8252
-	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
-	github.com/opencontainers/image-spec v1.0.1 // indirect
-	github.com/opencontainers/runc v0.1.1 // indirect
-	github.com/opencontainers/runtime-spec v1.0.1
-	github.com/opentracing/opentracing-go v1.1.0
-	github.com/prometheus/client_golang v1.1.0
-	github.com/shirou/gopsutil v2.20.2+incompatible
-	github.com/sirupsen/logrus v1.4.2
-	github.com/spf13/cobra v0.0.3
-	github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2 // indirect
+	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
-	go.etcd.io/bbolt v1.3.3 // indirect
-	golang.org/x/crypto v0.0.0-20191112222119-e1110fd1c708 // indirect
-	golang.org/x/net v0.0.0-20200222125558-5a598a2470a0 // indirect
-	golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae // indirect
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
-	google.golang.org/appengine v1.6.5 // indirect
-	google.golang.org/genproto v0.0.0-20200218151345-dad8c97a84f5 // indirect
-	google.golang.org/grpc v1.27.1
-	k8s.io/api v0.0.0-20191112020540-7f9008e52f64
-	k8s.io/apimachinery v0.0.0
-	k8s.io/client-go v0.0.0
+	github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417
+	github.com/opentracing/opentracing-go v1.1.0
+	github.com/prometheus/client_golang v1.11.1
+	github.com/shirou/gopsutil v2.20.2+incompatible
+	github.com/sirupsen/logrus v1.9.3
+	github.com/spf13/cobra v1.0.0
+	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
+	google.golang.org/grpc v1.58.3
+	k8s.io/api v0.22.5
+	k8s.io/apimachinery v0.22.5
+	k8s.io/client-go v0.22.5
 )
 
 replace github.com/khulnasoft/nxpod/content-service/api => ../content-service-api/go // leeway

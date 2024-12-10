@@ -13,7 +13,7 @@
         "labels": {
           "app": "nxpod",
           "component": "workspace",
-          "nxpod.io/networkpolicy": "default",
+          "nxpod.khulnasoft.com/networkpolicy": "default",
           "gpwsman": "true",
           "headless": "false",
           "metaID": "b246b28e-4776-47d5-961d-10548ffac9a8",
@@ -219,15 +219,15 @@
                 {
                   "matchExpressions": [
                     {
-                      "key": "nxpod.io/theia.master.1605",
+                      "key": "nxpod.khulnasoft.com/theia.master.1605",
                       "operator": "Exists"
                     },
                     {
-                      "key": "nxpod.io/ws-sync",
+                      "key": "nxpod.khulnasoft.com/ws-sync",
                       "operator": "Exists"
                     },
                     {
-                      "key": "nxpod.io/workload_workspace",
+                      "key": "nxpod.khulnasoft.com/workload_workspace",
                       "operator": "In",
                       "values": [
                         "true"

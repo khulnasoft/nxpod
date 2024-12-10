@@ -26,7 +26,7 @@ func TestWorkspaceAuthHandler(t *testing.T) {
 	}
 
 	const (
-		domain      = "nxpod.io"
+		domain      = "nxpod.khulnasoft.com"
 		workspaceID = "workspac-65f4-43c9-bf46-3541b89dca85"
 		instanceID  = "instance-fce1-4ff6-9364-cf6dff0c4ecf"
 		ownerToken  = "owner-token"
