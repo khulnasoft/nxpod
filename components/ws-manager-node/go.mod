@@ -33,7 +33,9 @@ require (
 	github.com/spf13/cobra v0.0.3
 	github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2 // indirect
 	go.etcd.io/bbolt v1.3.3 // indirect
-	golang.org/x/crypto v0.1.0 // indirect
+	golang.org/x/crypto v0.0.0-20191112222119-e1110fd1c708 // indirect
+	golang.org/x/net v0.0.0-20200222125558-5a598a2470a0 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
 	google.golang.org/appengine v1.6.5 // indirect
 	google.golang.org/genproto v0.0.0-20200218151345-dad8c97a84f5 // indirect
