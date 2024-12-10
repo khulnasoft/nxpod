@@ -7,26 +7,26 @@ require (
 	github.com/alecthomas/repr v0.0.0-20200325044227-4184120f674c
 	github.com/asaskevich/govalidator v0.0.0-20200428143746-21a406dcc535 // indirect
 	github.com/go-ozzo/ozzo-validation v3.5.0+incompatible
-	github.com/golang/mock v1.4.3
-	github.com/golang/protobuf v1.4.0
-	github.com/google/uuid v1.1.1
+	github.com/golang/mock v1.6.0
+	github.com/golang/protobuf v1.5.3
+	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.1-0.20190118093823-f849b5445de4
 	github.com/imdario/mergo v0.3.8
-	github.com/minio/minio-go/v6 v6.0.56 // indirect
-	github.com/opentracing/opentracing-go v1.1.0
-	github.com/prometheus/client_golang v1.1.0
-	github.com/sirupsen/logrus v1.5.0
-	github.com/spf13/afero v1.2.2
-	github.com/spf13/cobra v0.0.5
 	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/registry-facade/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/ws-manager/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/ws-sync/api v0.0.0-00010101000000-000000000000
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
-	google.golang.org/grpc v1.29.1
+	github.com/minio/minio-go/v6 v6.0.56 // indirect
+	github.com/opentracing/opentracing-go v1.1.0
+	github.com/prometheus/client_golang v1.11.1
+	github.com/sirupsen/logrus v1.6.0
+	github.com/spf13/afero v1.9.2
+	github.com/spf13/cobra v0.0.5
+	golang.org/x/sync v0.1.0
+	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
+	google.golang.org/grpc v1.56.3
 	k8s.io/api v0.0.0-20191112020540-7f9008e52f64
 	k8s.io/apimachinery v0.0.0
 	k8s.io/client-go v0.0.0

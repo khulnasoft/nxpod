@@ -10,37 +10,26 @@ replace github.com/docker/docker v1.13.1 => github.com/docker/engine v0.0.0-2019
 replace github.com/Sirupsen/logrus v1.6.0 => github.com/sirupsen/logrus v1.6.0 // leeway ignore
 
 require (
-	github.com/Microsoft/hcsshim v0.8.7 // indirect
 	github.com/alecthomas/jsonschema v0.0.0-20190504002508-159cbd5dba26
 	github.com/alecthomas/repr v0.0.0-20200325044227-4184120f674c
-	github.com/containerd/cgroups v0.0.0-20200407151229-7fc7a507c04c // indirect
-	github.com/containerd/containerd v1.3.3
-	github.com/containerd/continuity v0.0.0-20200228182428-0f16d7a0959c // indirect
-	github.com/containerd/fifo v0.0.0-20191213151349-ff969a566b00 // indirect
-	github.com/containerd/ttrpc v1.0.0 // indirect
-	github.com/containerd/typeurl v1.0.0
-	github.com/docker/distribution v2.7.1+incompatible // indirect
+	github.com/containerd/containerd v1.6.26
+	github.com/containerd/typeurl v1.0.2
 	github.com/docker/docker v1.13.1 // indirect
 	github.com/docker/engine v17.12.0-ce-rc1.0.20200514230353-811a247d06e8+incompatible
-	github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c // indirect
-	github.com/gogo/googleapis v1.4.0 // indirect
-	github.com/google/go-cmp v0.5.0
-	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
-	github.com/opencontainers/go-digest v1.0.0
-	github.com/opencontainers/image-spec v1.0.1
-	github.com/opencontainers/runc v0.1.1 // indirect
-	github.com/opentracing/opentracing-go v1.1.0
-	github.com/prometheus/client_golang v1.1.0
-	github.com/sirupsen/logrus v1.4.2
-	github.com/spf13/cobra v0.0.3
-	github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2 // indirect
+	github.com/google/go-cmp v0.5.9
+	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/ws-sync/api v0.0.0-00010101000000-000000000000
-	go.etcd.io/bbolt v1.3.4 // indirect
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
-	google.golang.org/grpc v1.29.1
+	github.com/opencontainers/go-digest v1.0.0
+	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b
+	github.com/opentracing/opentracing-go v1.1.0
+	github.com/prometheus/client_golang v1.11.1
+	github.com/sirupsen/logrus v1.9.3
+	github.com/spf13/cobra v1.0.0
+	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
+	google.golang.org/grpc v1.58.3
 )
 
 replace github.com/khulnasoft/nxpod/common-go => ../common-go // leeway
