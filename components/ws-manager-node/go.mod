@@ -22,7 +22,8 @@ require (
 	github.com/google/go-cmp v0.3.1
 	github.com/google/tcpproxy v0.0.0-20200125044825-b6bb9b5b8252
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
-	github.com/opencontainers/image-spec v1.0.1 // indirect
+	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
+	github.com/opencontainers/image-spec v1.0.2 // indirect
 	github.com/opencontainers/runc v0.1.1 // indirect
 	github.com/opencontainers/runtime-spec v1.0.1
 	github.com/opentracing/opentracing-go v1.1.0
@@ -31,7 +32,6 @@ require (
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v0.0.3
 	github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2 // indirect
-	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
 	go.etcd.io/bbolt v1.3.3 // indirect
 	golang.org/x/crypto v0.0.0-20191112222119-e1110fd1c708 // indirect
 	golang.org/x/net v0.0.0-20200222125558-5a598a2470a0 // indirect
