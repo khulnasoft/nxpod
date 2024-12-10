@@ -20,11 +20,11 @@ require (
 	github.com/khulnasoft/nxpod/ws-sync/api v0.0.0-00010101000000-000000000000
 	github.com/minio/minio-go/v6 v6.0.56 // indirect
 	github.com/opentracing/opentracing-go v1.1.0
-	github.com/prometheus/client_golang v1.11.1
+	github.com/prometheus/client_golang v1.20.5
 	github.com/sirupsen/logrus v1.6.0
 	github.com/spf13/afero v1.9.2
 	github.com/spf13/cobra v0.0.5
-	golang.org/x/sync v0.1.0
+	golang.org/x/sync v0.7.0
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
 	google.golang.org/grpc v1.56.3
 	k8s.io/api v0.0.0-20191112020540-7f9008e52f64

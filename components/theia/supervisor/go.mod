@@ -3,20 +3,17 @@ module github.com/khulnasoft/nxpod/theia/supervisor
 go 1.14
 
 require (
-	cloud.google.com/go v0.48.0 // indirect
-	github.com/grpc-ecosystem/grpc-gateway v1.14.6
-	github.com/prometheus/procfs v0.0.8 // indirect
-	github.com/smartystreets/goconvey v0.0.0-20190731233626-505e41936337 // indirect
-	github.com/soheilhy/cmux v0.1.4
+	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/content-service/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/nxpod/ws-sync/api v0.0.0-00010101000000-000000000000
-	golang.org/x/crypto v0.0.0-20191112222119-e1110fd1c708 // indirect
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
-	google.golang.org/appengine v1.6.5 // indirect
-	google.golang.org/grpc v1.29.1
+	github.com/smartystreets/goconvey v0.0.0-20190731233626-505e41936337 // indirect
+	github.com/soheilhy/cmux v0.1.4
+	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da
+	google.golang.org/grpc v1.67.1
+	google.golang.org/grpc/examples v0.0.0-20241206050055-66ba4b264d26 // indirect
 )
 
 replace github.com/khulnasoft/nxpod/common-go => ../../common-go // leeway
