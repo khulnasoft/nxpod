@@ -23,7 +23,7 @@ require (
 	github.com/google/tcpproxy v0.0.0-20200125044825-b6bb9b5b8252
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
 	github.com/khulnasoft/nxpod/common-go v0.0.0-00010101000000-000000000000
-	github.com/opencontainers/image-spec v1.0.1 // indirect
+	github.com/opencontainers/image-spec v1.0.2 // indirect
 	github.com/opencontainers/runc v0.1.1 // indirect
 	github.com/opencontainers/runtime-spec v1.0.1
 	github.com/opentracing/opentracing-go v1.1.0
