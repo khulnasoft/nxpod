@@ -7,9 +7,9 @@
 
 /**
  * Hostname may be of the form:
- *  - b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io
- *  - 1234-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io
- *  - webview-1234-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io (or any other string replacing webview)
+ *  - b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com
+ *  - 1234-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com
+ *  - webview-1234-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com (or any other string replacing webview)
  * @param hostname The hostname the request is headed to
  */
 export const parseWorkspaceIdFromHostname = function(hostname: string) {

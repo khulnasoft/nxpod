@@ -15,7 +15,7 @@
         },
         "phase": 5,
         "conditions": {
-            "failed": "cannot pull image: Back-off pulling image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
+            "failed": "cannot pull image: Back-off pulling image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
             "deployed": 1
         },
         "runtime": {

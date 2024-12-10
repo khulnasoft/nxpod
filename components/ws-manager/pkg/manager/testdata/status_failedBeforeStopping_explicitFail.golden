@@ -10,7 +10,7 @@
         },
         "spec": {
             "workspace_image": "eu.gcr.io/nxpod-dev/workspace-images/b24b4698d67f493b801d17196870fd8a422ffa1e/eu.gcr.io/nxpod-dev/workspace-full:sha256-535009d8cf429001e17f0f6388f33065c53cb70a62904800aa3f424403c7cb7e",
-            "url": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.io"
+            "url": "http://eb694666-269a-4d8c-a031-3cd6ea8135f9.ws-eu.gh-2510.staging.nxpod.khulnasoft.com"
         },
         "phase": 5,
         "conditions": {

@@ -5,7 +5,7 @@
         "component": "workspace",
         "workspaceID": "660fe87c-0b7a-4bc2-86f4-276b8b038614",
         "gpwsman": "true",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "app": "nxpod",
         "metaID": "fe9c4b69-4072-42ea-a446-98c2a7dee1f0",
         "headless": "false",
@@ -26,7 +26,7 @@
         "container.apparmor.security.beta.kubernetes.io/workspace": "runtime/default",
         "nxpod/customTimeout": "30m",
         "nxpod/id": "660fe87c-0b7a-4bc2-86f4-276b8b038614",
-        "nxpod/url": "https://fe9c4b69-4072-42ea-a446-98c2a7dee1f0.ws-eu01.nxpod.io",
+        "nxpod/url": "https://fe9c4b69-4072-42ea-a446-98c2a7dee1f0.ws-eu01.nxpod.khulnasoft.com",
         "nxpod/contentInitializer": "[redacted]",
         "seccomp.security.alpha.kubernetes.io/pod": "runtime/default",
         "prometheus.io/scrape": "true",
@@ -139,14 +139,14 @@
                 "matchExpressions": [
                   {
                     "operator": "Exists",
-                    "key": "nxpod.io/theia.master.2563"
+                    "key": "nxpod.khulnasoft.com/theia.master.2563"
                   },
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "Exists"
                   }
                 ]

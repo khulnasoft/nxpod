@@ -13,7 +13,7 @@ import { Branding } from '@nxpod/nxpod-protocol';
 export const Context = React.createContext<Context>({ disabledActions: false })
 
 /**
- * This interface is a quick measure to extract variance from dashboard that we want to have control over for nxpod.io.
+ * This interface is a quick measure to extract variance from dashboard that we want to have control over for nxpod.khulnasoft.com.
  */
 export interface Context {
     menuEntries?: (entries: MenuEntry[]) => MenuEntry[];

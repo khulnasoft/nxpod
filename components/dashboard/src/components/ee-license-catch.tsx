@@ -57,7 +57,7 @@ export class EELicenseCatch extends React.Component<EELicenseCatchProps, EELicen
                 <Dialog open={true} key="ee-feature-dialog">
                     <DialogTitle>You have found an enterprise feature</DialogTitle>
                     <DialogContent>
-                        which is not implemented in this installation of Nxpod. To use it, please install <a href="https://nxpod.io">Nxpod Enterprise Edition</a>.
+                        which is not implemented in this installation of Nxpod. To use it, please install <a href="https://nxpod.khulnasoft.com">Nxpod Enterprise Edition</a>.
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={() => this.closeDialog()}>Close</Button>

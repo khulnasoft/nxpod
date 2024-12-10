@@ -3,7 +3,7 @@ affinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
       - matchExpressions:
-        - key: nxpod.io/workload_meta
+        - key: nxpod.khulnasoft.com/workload_meta
           operator: In
           values:
           - "true"
@@ -17,7 +17,7 @@ components:
             requiredDuringSchedulingIgnoredDuringExecution:
               nodeSelectorTerms:
               - matchExpressions:
-                - key: nxpod.io/workload_workspace
+                - key: nxpod.khulnasoft.com/workload_workspace
                   operator: In
                   values:
                   - "true"

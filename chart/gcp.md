@@ -102,7 +102,7 @@ gcloud beta container clusters create nxpod-cluster \
         --num-nodes=1 \
         --enable-autoscaling --min-nodes=1 --max-nodes=3 \
         --service-account=nxpod-nodes-meta@$PROJECT_ID.iam.gserviceaccount.com \
-        --node-labels="nxpod.io/workload_meta=true" \
+        --node-labels="nxpod.khulnasoft.com/workload_meta=true" \
         --machine-type=n1-standard-4 \
         --image-type=cos \
         --disk-size=100 \
@@ -119,7 +119,7 @@ gcloud beta container node-pools create workspace-pool-1 \
         --num-nodes=0 \
         --enable-autoscaling --min-nodes=0 --max-nodes=10 \
         --service-account=nxpod-nodes-workspace@$PROJECT_ID.iam.gserviceaccount.com \
-        --node-labels="nxpod.io/workload_workspace=true" \
+        --node-labels="nxpod.khulnasoft.com/workload_workspace=true" \
         --machine-type=n1-standard-16 \
         --image-type=ubuntu \
         --disk-size=200 \

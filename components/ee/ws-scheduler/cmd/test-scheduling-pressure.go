@@ -112,7 +112,7 @@ func createPod(clientSet *kubernetes.Clientset, scheduler string, namespace stri
 							corev1.NodeSelectorTerm{
 								MatchExpressions: []corev1.NodeSelectorRequirement{
 									corev1.NodeSelectorRequirement{
-										Key:      "nxpod.io/workload_workspace",
+										Key:      "nxpod.khulnasoft.com/workload_workspace",
 										Operator: corev1.NodeSelectorOpIn,
 										Values:   []string{"true"},
 									},

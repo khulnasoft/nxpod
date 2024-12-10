@@ -91,9 +91,9 @@ const (
 	headlessLabel = "headless"
 
 	// theiaVersionLabelFmt is the format to produce the label a node has if Theia is available on it in a particular version
-	theiaVersionLabelFmt = "nxpod.io/theia.%s"
+	theiaVersionLabelFmt = "nxpod.khulnasoft.com/theia.%s"
 	// wssyncLabel is the label a node has if ws-sync is running on it
-	wssyncLabel = "nxpod.io/ws-sync"
+	wssyncLabel = "nxpod.khulnasoft.com/ws-sync"
 )
 
 const (

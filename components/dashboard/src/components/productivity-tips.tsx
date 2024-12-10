@@ -32,8 +32,8 @@ const tips = [
     <span>Press <kbd>{ctrlCmd}</kbd> + <kbd>P</kbd> to search and open any file by name.</span>,
     <span>Press <kbd>Ctrl</kbd> + <kbd>`</kbd> to open a new terminal.</span>,
     <span>Press <kbd>{ctrlCmd}</kbd> + <kbd>/</kbd> to toggle code comments.</span>,
-    <span>Prefix a pull request URL with <strong>nxpod.io/#</strong> to do a deep code review.</span>,
-    <span>You can open every GitHub, GitLab, or Bitbucket project by prefixing the URL with <strong>nxpod.io/#</strong>.</span>,
+    <span>Prefix a pull request URL with <strong>nxpod.khulnasoft.com/#</strong> to do a deep code review.</span>,
+    <span>You can open every GitHub, GitLab, or Bitbucket project by prefixing the URL with <strong>nxpod.khulnasoft.com/#</strong>.</span>,
     <span>To fork a repository, press <kbd>F1</kbd> and search for <strong>Git: Fork...</strong>.</span>,
     <span>Press <kbd>F1</kbd> to open the command palette.</span>,
     <span>To rename a variable, highlight it then press <kbd>F2</kbd>.</span>,
@@ -44,12 +44,12 @@ const tips = [
     <span>Run <strong>gp open &lt;file&gt;</strong> to open a file from the terminal.</span>,
     <span>Run <strong>gp init</strong> in the terminal to create a <strong>.nxpod.yml</strong> for your project.</span>,
     <span>Run <strong>gp url 8080</strong> in the terminal to print the preview URL for that port.</span>,
-    <span>Manage all your environment variables <a href="https://nxpod.io/settings/" target="_blank" rel="noopener">here</a>.</span>,
-    <span>Questions? Find us in the <a href="https://community.nxpod.io/" target="_blank" rel="noopener noreferrer">Nxpod Community</a>.</span>,
-    <span>Check <a href="https://www.nxpod.io/docs/" target="_blank" rel="noopener">www.nxpod.io/docs/</a> to learn more.</span>,
-    <span>See more tips &amp; tricks <a href="https://www.nxpod.io/docs/tips-and-tricks/" target="_blank" rel="noopener">here</a>.</span>,
+    <span>Manage all your environment variables <a href="https://nxpod.khulnasoft.com/settings/" target="_blank" rel="noopener">here</a>.</span>,
+    <span>Questions? Find us in the <a href="https://community.nxpod.khulnasoft.com/" target="_blank" rel="noopener noreferrer">Nxpod Community</a>.</span>,
+    <span>Check <a href="https://www.nxpod.khulnasoft.com/docs/" target="_blank" rel="noopener">www.nxpod.khulnasoft.com/docs/</a> to learn more.</span>,
+    <span>See more tips &amp; tricks <a href="https://www.nxpod.khulnasoft.com/docs/tips-and-tricks/" target="_blank" rel="noopener">here</a>.</span>,
     <span>Please submit bugs and feature requests <a href="https://github.com/khulnasoft/nxpod/issues" target="_blank" rel="noopener noreferrer">on GitHub</a>.</span>,
-    <span>Install any VS Code extension with a simple drag-and-drop. <a href="https://www.nxpod.io/docs/vscode-extensions/" target="_blank" rel="noopener">See how</a>.</span>
+    <span>Install any VS Code extension with a simple drag-and-drop. <a href="https://www.nxpod.khulnasoft.com/docs/vscode-extensions/" target="_blank" rel="noopener">See how</a>.</span>
 ];
 
 export class ProductivityTips extends React.Component<{userHasCreatedWorkspaces?: boolean}, { platform?: UserPlatform }> {
@@ -91,7 +91,7 @@ export class ProductivityTips extends React.Component<{userHasCreatedWorkspaces?
                 <div className='pro-tip message'>
                     <div className='background'>
                         <div>
-                            Prefix any GitHub, GitLab, or Bitbucket URL with <strong>nxpod.io/#</strong> to open pull requests, issues or branches in Nxpod
+                            Prefix any GitHub, GitLab, or Bitbucket URL with <strong>nxpod.khulnasoft.com/#</strong> to open pull requests, issues or branches in Nxpod
                         </div>
                         <div className='image'>
                             <UrlAnimation></UrlAnimation>
@@ -147,7 +147,7 @@ class UrlAnimation extends React.Component<{}, { url: string }>{
     constructor(p: {}) {
         super(p);
         this.githubUrl = 'https://github.com/my-org/my-project';
-        this.nxpodUrl = 'https://nxpod.io/#';
+        this.nxpodUrl = 'https://nxpod.khulnasoft.com/#';
         this.prefix = '';
         this.startDelay = 2000;
         this.initialStepTime = 80;

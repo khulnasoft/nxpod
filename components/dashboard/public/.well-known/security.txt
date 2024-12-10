@@ -1,4 +1,4 @@
-Contact: security@nxpod.io
+Contact: security@nxpod.khulnasoft.com
 Preferred-Languages: en, de
-Canonical: https://nxpod.io/.well-known/security.txt
+Canonical: https://nxpod.khulnasoft.com/.well-known/security.txt
 Hiring: https://typefox.io/career

@@ -176,7 +176,7 @@ export class NxpodServerEEImpl<C extends NxpodClient, S extends NxpodServer> ext
     }
 
     /**
-     * nxpod.io Extension point for implementing eligibility checks. Throws a ResponseError if not eligible.
+     * nxpod.khulnasoft.com Extension point for implementing eligibility checks. Throws a ResponseError if not eligible.
      */
     protected async maySetTimeout(user: User): Promise<boolean> {
         return true;

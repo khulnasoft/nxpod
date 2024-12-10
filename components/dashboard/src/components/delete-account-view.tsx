@@ -93,7 +93,7 @@ export class DeleteAccountView extends React.Component<DeleteAccountViewProps, D
             <DialogContent>
                 <Typography variant="body1">
                     <div>We are sorry - something went wrong while deleting your account. </div>
-                    <div>Please get in touch at <a href="mailto:support@nxpod.io">support@nxpod.io</a>.</div>
+                    <div>Please get in touch at <a href="mailto:support@nxpod.khulnasoft.com">support@nxpod.khulnasoft.com</a>.</div>
                 </Typography>
             </DialogContent>
             <DialogActions>

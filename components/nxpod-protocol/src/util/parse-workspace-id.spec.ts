@@ -13,17 +13,17 @@ const expect = chai.expect;
 export class ParseWorkspaceIdTest {
 
     @test public parseWorkspaceIdFromHostname_fromWorkspaceLocation() {
-        const actual = parseWorkspaceIdFromHostname("b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io");
+        const actual = parseWorkspaceIdFromHostname("b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com");
         expect(actual).to.equal("b7e0eaf8-ec73-44ec-81ea-04859263b656");
     }
 
     @test public parseWorkspaceIdFromHostname_fromWorkspacePortLocation() {
-        const actual = parseWorkspaceIdFromHostname("3000-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io");
+        const actual = parseWorkspaceIdFromHostname("3000-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com");
         expect(actual).to.equal("b7e0eaf8-ec73-44ec-81ea-04859263b656");
     }
 
     @test public parseWorkspaceIdFromHostname_fromWorkspacePortLocationWithWebviewPrefix() {
-        const actual = parseWorkspaceIdFromHostname("webview-3000-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.io");
+        const actual = parseWorkspaceIdFromHostname("webview-3000-b7e0eaf8-ec73-44ec-81ea-04859263b656.ws-eu01.nxpod.khulnasoft.com");
         expect(actual).to.equal("b7e0eaf8-ec73-44ec-81ea-04859263b656");
     }
 

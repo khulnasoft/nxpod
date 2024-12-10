@@ -1,5 +1,5 @@
 {
-    "$id": "https://nxpod.io/nxpod.schema.json",
+    "$id": "https://nxpod.khulnasoft.com/nxpod.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Nxpod Config",
     "type": "object",

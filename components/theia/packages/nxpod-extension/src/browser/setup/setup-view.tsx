@@ -272,7 +272,7 @@ export class SetupView extends ReactWidget {
                         paddingBottom: 15
                     }}> 
                         <p>Doesn't Work As Expected?</p>
-                        <a href='https://www.nxpod.io/docs/configuration/' target='_blank'><button className="secondary theia-button">Go to Docs</button></a>
+                        <a href='https://www.nxpod.khulnasoft.com/docs/configuration/' target='_blank'><button className="secondary theia-button">Go to Docs</button></a>
                         <a href='https://calendly.com/nxpod/onboarding' target='_blank'><button className='secondary theia-button'>Schedule a Call</button></a>
                     </div>
                 </div>

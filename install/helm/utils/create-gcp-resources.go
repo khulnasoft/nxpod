@@ -346,7 +346,7 @@ func createCluster() error {
 		"min-nodes":                   "1",
 		"max-nodes":                   "3",
 		"service-account":             "nxpod-nodes-meta@" + projectID + ".iam.gserviceaccount.com",
-		"node-labels":                 "nxpod.io/workload_meta=true",
+		"node-labels":                 "nxpod.khulnasoft.com/workload_meta=true",
 		"machine-type":                "n1-standard-4",
 		"image-type":                  "cos",
 		"disk-size":                   "100",
@@ -370,7 +370,7 @@ func createCluster() error {
 		"min-nodes":             "0",
 		"max-nodes":             "10",
 		"service-account":       "nxpod-nodes-workspace@" + projectID + ".iam.gserviceaccount.com",
-		"node-labels":           "nxpod.io/workload_workspace=true",
+		"node-labels":           "nxpod.khulnasoft.com/workload_workspace=true",
 		"machine-type":          "n1-standard-16",
 		"image-type":            "cos_containerd",
 		"disk-size":             "200",
@@ -658,13 +658,13 @@ func printNextSteps() {
 
 Your GCP project and this Helm chart are (almost) ready for installation.
 The steps left to do are:
-- [optional] set up HTTPs certificates (see https://www.nxpod.io/docs/self-hosted/latest/install/https-certs/)
+- [optional] set up HTTPs certificates (see https://www.nxpod.khulnasoft.com/docs/self-hosted/latest/install/https-certs/)
 - [required] set your domain (see values.yaml)
-- [required] set up OAuth (see https://www.nxpod.io/docs/self-hosted/latest/install/oauth/) (see values.yaml)
+- [required] set up OAuth (see https://www.nxpod.khulnasoft.com/docs/self-hosted/latest/install/oauth/) (see values.yaml)
 - use helm to install Nxpod:
 
     export PATH=` + filepath.Join(cwd, "utils") + `:$PATH
-    helm repo add charts.nxpod.io https://charts.nxpod.io
+    helm repo add charts.nxpod.khulnasoft.com https://charts.nxpod.khulnasoft.com
     helm dep update
     helm upgrade --install $(for i in $(cat configuration.txt); do echo -e "-f $i"; done) nxpod .
 `)

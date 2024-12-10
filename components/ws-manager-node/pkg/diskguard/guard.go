@@ -18,7 +18,7 @@ import (
 const (
 	// LabelDiskPressure is set on a node if any of the guarded disks have
 	// too little space available.
-	LabelDiskPressure = "nxpod.io/diskPressure"
+	LabelDiskPressure = "nxpod.khulnasoft.com/diskPressure"
 )
 
 // Guard regularly checks how much free space is left on a path/disk.

@@ -52,7 +52,7 @@ export class NxpodAboutView extends React.Component<{ branding?: Branding, host:
             </span>);
         } else {
             return (<span>
-                Copyright {year} TypeFox. All Rights Reserved | <a className="theia-href" target="_blank" href="https://www.nxpod.io/terms/">Terms of Service</a>
+                Copyright {year} TypeFox. All Rights Reserved | <a className="theia-href" target="_blank" href="https://www.nxpod.khulnasoft.com/terms/">Terms of Service</a>
             </span>);
         }
     }

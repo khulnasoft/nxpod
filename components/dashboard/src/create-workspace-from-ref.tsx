@@ -14,12 +14,12 @@ import withRoot from "./withRoot";
 export function start() {
     const contextUrl = document.referrer;
     if (contextUrl === undefined || contextUrl === '') {
-        // Opening nxpod.io/ref without context: Show specific error
+        // Opening nxpod.khulnasoft.com/ref without context: Show specific error
         const NoReferrerWithRoot = withRoot(NoReferrer);
         ReactDOM.render(<NoReferrerWithRoot />, document.querySelector('#root'));
         return;
     } else {
-        // Redirect to nxpod.io/#<contextUrl> to get the same experience as with direct call
+        // Redirect to nxpod.khulnasoft.com/#<contextUrl> to get the same experience as with direct call
         const url = new URL(window.location.toString());
         url.pathname = "/";
         url.hash = contextUrl;

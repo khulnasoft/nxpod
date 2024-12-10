@@ -87,8 +87,8 @@ export class SnapshotTakenDialog extends AbstractDialog<boolean> {
 
     setUrl(url: string) {
         this.link.setContent(url);
-        this.mdCode.setContent(`[![Open in Nxpod](https://nxpod.io/button/open-in-nxpod.svg)](${url})`);
-        this.htmlCode.setContent(`<a href="${url}"><img alt="Open in Nxpod" src="https://nxpod.io/button/open-in-nxpod.svg"></a>`);
+        this.mdCode.setContent(`[![Open in Nxpod](https://nxpod.khulnasoft.com/button/open-in-nxpod.svg)](${url})`);
+        this.htmlCode.setContent(`<a href="${url}"><img alt="Open in Nxpod" src="https://nxpod.khulnasoft.com/button/open-in-nxpod.svg"></a>`);
     }
 
     protected showNoLicenseContent() {
@@ -133,7 +133,7 @@ export class SnapshotTakenDialog extends AbstractDialog<boolean> {
         enableSharingPanel.appendChild(row);
         if (isButton) {
             const button = document.createElement('img');
-            button.src = 'https://nxpod.io/button/open-in-nxpod.svg';
+            button.src = 'https://nxpod.khulnasoft.com/button/open-in-nxpod.svg';
             button.style.paddingRight = '5px';
             row.appendChild(button);
         }

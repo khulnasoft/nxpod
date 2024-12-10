@@ -222,7 +222,7 @@ func (m *Manager) createDefiniteWorkspacePod(startContext *startWorkspaceContext
 	}
 
 	labels := make(map[string]string)
-	labels["nxpod.io/networkpolicy"] = "default"
+	labels["nxpod.khulnasoft.com/networkpolicy"] = "default"
 	for k, v := range startContext.Labels {
 		labels[k] = v
 	}
@@ -388,7 +388,7 @@ func (m *Manager) createDefiniteWorkspacePod(startContext *startWorkspaceContext
 			for i, term := range nst {
 				nt := term.MatchExpressions[:0]
 				for _, expr := range term.MatchExpressions {
-					if strings.HasPrefix(expr.Key, "nxpod.io/theia.") {
+					if strings.HasPrefix(expr.Key, "nxpod.khulnasoft.com/theia.") {
 						continue
 					}
 					nt = append(nt, expr)

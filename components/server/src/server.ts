@@ -84,10 +84,10 @@ export class Server<C extends NxpodClient, S extends NxpodServer> {
         const websocketConnectionHandler = this.websocketConnectionHandler;
         this.eventEmitter.on(Server.EVENT_ON_START, (httpServer) => {
             // CSRF protection: check "Origin" header, it must be either:
-            //  - nxpod.io (hostUrl.hostname) or
+            //  - nxpod.khulnasoft.com (hostUrl.hostname) or
             //  - a workspace location (ending of hostUrl.hostname)
             // We rely on the origin header being set correctly (needed by regular clients to use Nxpod:
-            // CORS allows subdomains to access nxpod.io)
+            // CORS allows subdomains to access nxpod.khulnasoft.com)
             const csrfGuard: ws.VerifyClientCallbackAsync = (info: { origin: string; secure: boolean; req: http.IncomingMessage }, callback: (res: boolean, code?: number, message?: string) => void) => {
                 let allowedRequest = isAllowedWebsocketDomain(info.origin, this.env.hostUrl.url.hostname);
                 if (this.env.kubeStage === 'prodcopy' || this.env.kubeStage === 'staging') {
@@ -142,12 +142,12 @@ export class Server<C extends NxpodClient, S extends NxpodServer> {
                 return next();
             }
 
-            // As we direct browsers to *api*.nxpod.io/login, we get requests like the following, which we do not want to end up in the error logs
+            // As we direct browsers to *api*.nxpod.khulnasoft.com/login, we get requests like the following, which we do not want to end up in the error logs
             if (req.originalUrl === '/'
                 || req.originalUrl === '/nxpod'
                 || req.originalUrl === '/favicon.ico'
                 || req.originalUrl === '/robots.txt') {
-                    // Redirect to nxpod.io/<pathname>
+                    // Redirect to nxpod.khulnasoft.com/<pathname>
                     res.redirect(this.env.hostUrl.with({ pathname: req.originalUrl }).toString());
                     return;
                 }

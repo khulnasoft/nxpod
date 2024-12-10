@@ -10,7 +10,7 @@
             },
             "annotations": {
                 "nxpod/ingressPorts": "{\"3000\":{\"workspacePort\":3000,\"ingressPort\":10081}}",
-                "nxpod/port-url-3000": "nxpod.io:10081"
+                "nxpod/port-url-3000": "nxpod.khulnasoft.com:10081"
             }
         },
         "spec": {
@@ -38,7 +38,7 @@
             "port": 3000,
             "target": 38080,
             "visibility": 1,
-            "url": "nxpod.io:10081"
+            "url": "nxpod.khulnasoft.com:10081"
         }
     ]
 }
