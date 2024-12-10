@@ -1,0 +1,19 @@
+packages:
+  - name: app
+    type: go
+    srcs:
+      - "**/*.go"
+      - "go.mod"
+      - "go.sum"
+    env:
+      - CGO_ENABLED=0
+      - GOOS=linux
+    deps:
+      - components/supervisor-api/go:lib
+      - components/nxpod-protocol/go:lib
+      - components/common-go:lib
+      - components/ide-metrics-api/go:lib
+      - components/public-api/go:lib
+    config:
+      packaging: app
+      buildCommand: ["go", "build", "-trimpath", "-ldflags", "-buildid= -w -s -X 'github.com/khulnasoft/nxpod/nxpod-cli/pkg/nxpod.Version=commit-${__git_commit}'"]

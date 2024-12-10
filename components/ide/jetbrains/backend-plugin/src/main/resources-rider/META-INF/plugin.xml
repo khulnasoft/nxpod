@@ -1,0 +1,146 @@
+<!--
+ Copyright (c) 2021 Nxpod GmbH. All rights reserved.
+ Licensed under the GNU Affero General Public License (AGPL).
+ See License.AGPL.txt in the project root for license information.
+-->
+<!--suppress PluginXmlValidity -->
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="/META-INF/extensions.xml" xpointer="xpointer(/idea-plugin/*)"/>
+
+    <id>io.nxpod.jetbrains.remote</id>
+    <name>Nxpod Remote</name>
+    <vendor>Nxpod</vendor>
+    <description>Provides integrations within a Nxpod workspace.</description>
+
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <!-- Use old formatting to resolve class not found exception -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-dependencies.html#3-dependency-declaration-in-pluginxml -->
+    <depends>intellij.rider.plugins.cwm</depends>
+    <depends>org.jetbrains.plugins.terminal</depends>
+    <depends optional="true" config-file="maven.xml">org.jetbrains.idea.maven</depends>
+    <dependencies>
+        <plugin id="Git4Idea"/>
+        <plugin id="org.jetbrains.plugins.terminal"/>
+        <plugin id="intellij.rider.plugins.cwm"/>
+    </dependencies>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="io.nxpod.jetbrains.remote.services.HeartbeatService"
+                            preload="true"/>
+        <applicationService serviceImplementation="io.nxpod.jetbrains.remote.NxpodManager" preload="true"/>
+
+        <projectService serviceImplementation="io.nxpod.jetbrains.remote.internal.NxpodTerminalServiceImpl" client="controller"
+                        preload="true"/>
+
+        <notificationGroup id="Nxpod Notifications" displayType="BALLOON" isLogByDefault="false"/>
+
+        <httpRequestHandler implementation="io.nxpod.jetbrains.remote.NxpodCLIService"/>
+
+        <projectService serviceImplementation="io.nxpod.jetbrains.remote.NxpodClientProjectSessionTracker"
+                        client="controller" preload="true"/>
+
+        <gateway.customization.name
+                implementation="io.nxpod.jetbrains.remote.NxpodGatewayClientCustomizationProvider"/>
+        <gateway.customization.metrics id="nxpodMetricsProvider"
+                                       implementation="io.nxpod.jetbrains.remote.NxpodMetricProvider"/>
+
+        <registryKey key="nxpod.forceUpdateMavenProjects.disabled" defaultValue="false"
+                     description="Disable the forced update of Maven projects when IDE opens."
+                     restartRequired="true"/>
+
+
+        <applicationService serviceInterface="io.nxpod.jetbrains.remote.NxpodIgnoredPortsForNotificationService"
+                            serviceImplementation="io.nxpod.jetbrains.remote.internal.NxpodIgnoredPortsForNotificationServiceImpl"
+                            preload="true"/>
+    </extensions>
+
+    <actions>
+        <action id="io.nxpod.jetbrains.remote.actions.StopWorkspaceAction"
+                class="io.nxpod.jetbrains.remote.actions.StopWorkspaceAction"
+                text="Nxpod: Stop Workspace"
+                icon="AllIcons.Actions.Pause">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.DashboardAction"
+                class="io.nxpod.jetbrains.remote.actions.DashboardAction"
+                text="Nxpod: Open Dashboard"
+                icon="AllIcons.General.ProjectTab">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.ExtendWorkspaceTimeoutAction"
+                class="io.nxpod.jetbrains.remote.actions.ExtendWorkspaceTimeoutAction"
+                text="Nxpod: Extend Workspace Timeout"
+                icon="AllIcons.Vcs.History">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.ContextAction"
+                class="io.nxpod.jetbrains.remote.actions.ContextAction"
+                text="Nxpod: Open Context"
+                icon="AllIcons.General.FitContent">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.SettingsAction"
+                class="io.nxpod.jetbrains.remote.actions.SettingsAction"
+                text="Nxpod: Open Settings"
+                icon="AllIcons.General.Settings">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.ShareWorkspaceSnapshotAction"
+                class="io.nxpod.jetbrains.remote.actions.ShareWorkspaceSnapshotAction"
+                text="Nxpod: Share Workspace Snapshot"
+                icon="AllIcons.Actions.Dump">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.AccessControlAction"
+                class="io.nxpod.jetbrains.remote.actions.AccessControlAction"
+                text="Nxpod: Open Access Control"
+                icon="AllIcons.Actions.Properties">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.DocumentationAction"
+                class="io.nxpod.jetbrains.remote.actions.DocumentationAction"
+                text="Nxpod: Documentation"
+                icon="AllIcons.General.ReaderMode">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.UpgradeSubscriptionAction"
+                class="io.nxpod.jetbrains.remote.actions.UpgradeSubscriptionAction"
+                text="Nxpod: Upgrade Subscription"
+                icon="AllIcons.Actions.PreviousOccurence">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.CommunityChatAction"
+                class="io.nxpod.jetbrains.remote.actions.CommunityChatAction"
+                text="Nxpod: Open Community Chat"
+                icon="AllIcons.General.Balloon">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.ReportIssueAction"
+                class="io.nxpod.jetbrains.remote.actions.ReportIssueAction"
+                text="Nxpod: Report Issue"
+                icon="AllIcons.General.ShowWarning">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.FollowUsOnTwitterAction"
+                class="io.nxpod.jetbrains.remote.actions.FollowUsOnTwitterAction"
+                text="Nxpod: Follow Us On Twitter"
+                icon="AllIcons.Gutter.ExtAnnotation">
+            <add-to-group group-id="UnattendedHostDropdownGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.NxpodCopyUrlAction"
+                class="io.nxpod.jetbrains.remote.actions.NxpodCopyUrlAction"
+                text="Copy URL"
+                icon="AllIcons.Actions.Copy">
+            <add-to-group group-id="PortForwardingPortGroup" anchor="last"/>
+        </action>
+        <action id="io.nxpod.jetbrains.remote.actions.NxpodCopyWebUrlAction"
+                class="io.nxpod.jetbrains.remote.actions.NxpodCopyWebUrlAction"
+                text="Copy Web URL"
+                icon="AllIcons.Actions.Copy">
+            <add-to-group group-id="PortForwardingPortGroup" anchor="last"/>
+            <add-to-group group-id="PortForwardingSuggestionGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

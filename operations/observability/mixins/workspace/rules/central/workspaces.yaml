@@ -1,0 +1,112 @@
+# Copyright (c) 2022 Nxpod GmbH. All rights reserved.
+# Licensed under the GNU Affero General Public License (AGPL).
+# See License.AGPL.txt in the project root for license information.
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  name: workspace-monitoring-central-rules
+spec:
+  groups:
+
+  - name: workspace-alerts
+    rules:
+    - alert: NxpodWorkspaceStuckOnStoppingMk2
+      labels:
+        severity: critical
+        dedicated: included
+      for: 20m
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodWorkspaceStuckOnStopping.md
+        summary: '{{ printf "%.2f" $value }}% of Regular workspaces stopping in {{ $labels.cluster }}'
+        description: '{{ printf "%.2f" $value }}% of Regular workspaces stopping in {{ $labels.cluster }} is too high.'
+      expr: |
+        sum(
+          nxpod_ws_manager_mk2_workspace_phase_total{type="Regular", phase="Stopping", cluster!~"ephemeral.*"}) / sum(nxpod_ws_manager_mk2_workspace_phase_total{type="Regular", cluster!~"ephemeral.*"}
+        ) >= .2
+        and
+        sum(
+          nxpod_ws_manager_mk2_workspace_phase_total{type="Regular", phase="Stopping", cluster!~"ephemeral.*"}
+        ) without(phase) > 15
+
+    - alert: NxpodWorkspaceHighStartFailureRate
+      labels:
+        severity: critical
+        dedicated: included
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodWorkspaceHighFailureRate.md
+        summary: Workspaces are failing to start in cluster {{ $labels.cluster }}.
+        description: For the last 15 minutes more than 20% of hew workspaces have failed to start
+      for: 15m
+      expr: |
+          sum(increase(nxpod_ws_manager_mk2_workspace_starts_failure_total{type="Regular", cluster!~"ephemeral.*"}[5m])) by (cluster) / sum(increase(nxpod_ws_manager_mk2_workspace_starts_total{type="Regular", cluster!~"ephemeral.*"}[5m])) by (cluster) > 0.2
+
+    - alert: NxpodWorkspaceHighFailureRateMk2
+      labels:
+        severity: critical
+        dedicated: included
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodWorkspaceHighFailureRate.md
+        summary: Workspaces are failing in cluster {{ $labels.cluster }}.
+        description: Multiple workspaces are failing for the last 5 minutes
+      expr: |
+          rate(nxpod_ws_manager_mk2_workspace_stops_total{reason="failed", type="Regular", cluster!~"ephemeral.*"}[5m]) >= 1
+
+    - alert: NxpodWorkspaceStatusUpdatesCeased
+      labels:
+        severity: warning
+      for: 10m
+      annotations:
+        summary: meta has not seen a workspace update in the last 10 minutes despite starting workspaces
+        description: meta has not seen a workspace update in the last 10 minutes despite starting workspaces
+      expr: |
+        sum(rate(nxpod_ws_manager_bridge_status_updates_total[1m])) == 0 AND sum(rate(grpc_client_handled_total{grpc_method="StartWorkspace", grpc_service="wsman.WorkspaceManager"}[1m])) != 0
+
+    - alert: NxpodTooManyWorkspacesInPendingMk2
+      labels:
+        severity: critical
+        dedicated: included
+      for: 15m
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodTooManyWorkspacesInPending.md
+        summary: workspaces are in pending phase
+        description: regular workspaces are stuck in pending phase in cluster {{ $labels.cluster }}.
+      expr: |
+        nxpod_ws_manager_mk2_workspace_phase_total{phase="Pending", type="Regular", cluster!~"ephemeral.*"} > 20
+
+    - alert: NxpodTooManyPrebuildsInPendingMk2
+      labels:
+        severity: critical
+        dedicated: included
+      for: 15m
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodTooManyPrebuildsInPending.md
+        summary: workspaces are in pending phase
+        description: prebuilds are stuck in pending phase in cluster {{ $labels.cluster }}.
+      expr: |
+        nxpod_ws_manager_mk2_workspace_phase_total{phase="Pending", type="Prebuild", cluster!~"ephemeral.*"} > 20
+
+    - alert: NxpodWorkspaceTooLongTerminating
+      labels:
+        severity: warning
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodWorkspaceTooLongTerminating.md
+        summary: workspace pods are terminating for too long.
+        description: workspace pods are terminating for too long in cluster {{ $labels.cluster }}.
+      expr: |
+        sum(time() - kube_pod_deletion_timestamp{namespace="default", pod=~"^ws-.*", cluster!~"ephemeral.*"}) by (pod) > 24 * 60 * 60
+
+    - alert: NxpodImagebuildDoneSuccess
+      labels:
+        severity: warning
+        team: engine
+      for: 12h
+      annotations:
+        runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/NxpodImagebuildDoneSuccess.md
+        summary: imagebuilds done are failing at a high rate in cluster {{ $labels.cluster }}.
+        description: imagebuilds are not reaching done at too high of a rate in cluster {{ $labels.cluster }}.
+      expr: |
+        (1 - (sum(rate(nxpod_image_builder_builds_done_total{success="false", cluster!~"ephemeral.*"}[4h])) / sum(rate(nxpod_image_builder_builds_done_total{cluster!~"ephemeral.*"}[4h])))) < 0.60
