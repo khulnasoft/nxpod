@@ -1,0 +1,15 @@
+packages:
+  - name: lib
+    type: yarn
+    srcs:
+      - "src/**"
+      - "styles/**"
+      - package.json
+      - mocha.opts
+    deps:
+      - components/nxpod-protocol:lib
+      - components/nxpod-protocol:lib
+    config:
+      packaging: library
+      yarnLock: ${coreYarnLockBase}/../../yarn.lock
+      tsconfig: tsconfig.json

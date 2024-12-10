@@ -1,0 +1,42 @@
+version: '3'
+services:
+
+  proxy:
+    image: nginx
+    volumes:
+      - ./certs:/etc/nginx/certs
+      - ./proxy/default.conf:/etc/nginx/templates/default.conf.template
+    ports:
+      - 443:443
+    environment:
+      - BASEDOMAIN=${BASEDOMAIN}
+    depends_on:
+      - nxpod
+      - gitlab
+
+  nxpod:
+    image: eu.gcr.io/nxpod-core-dev/build/nxpod-k3s:${VERSION:-latest}
+    privileged: true
+    tmpfs:
+      - /run
+      - /var/run
+      - /var/nxpod/workspaces
+    volumes:
+      - ./values:/values
+      - ./certs:/certs
+    environment:
+      - BASEDOMAIN=${BASEDOMAIN}
+      - DNSSERVER=${DNSSERVER:-}
+      - NXPOD_CHART_VERSION=${NXPOD_CHART_VERSION:-}
+
+  gitlab:
+    image: eu.gcr.io/nxpod-core-dev/build/gitlab-k3s:${VERSION:-latest}
+    privileged: true
+    tmpfs:
+      - /run
+      - /var/run
+    volumes:
+      - ./certs:/certs
+    environment:
+      - BASEDOMAIN=${BASEDOMAIN}
+      - DNSSERVER=${DNSSERVER:-}

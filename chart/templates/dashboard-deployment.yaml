@@ -1,0 +1,61 @@
+# Copyright (c) 2020 TypeFox GmbH. All rights reserved.
+# Licensed under the MIT License. See License-MIT.txt in the project root for license information.
+
+{{- $comp := .Values.components.dashboard -}}
+{{- $this := dict "root" . "gp" $.Values "comp" $comp -}}
+{{- if not $comp.disabled -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+  labels:
+    app: {{ template "nxpod.fullname" . }}
+    component: dashboard
+    kind: deployment
+    stage: {{ .Values.installation.stage }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "nxpod.fullname" . }}
+      component: dashboard
+      kind: pod
+      stage: {{ .Values.installation.stage }}
+  replicas: {{ $comp.replicas | default 1 }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      name: dashboard
+      labels:
+        app: {{ template "nxpod.fullname" . }}
+        component: dashboard
+        kind: pod
+        stage: {{ .Values.installation.stage }}
+      annotations:
+{{ include "nxpod.pod.dependsOn" $this | indent 8 }}
+    spec:
+{{ include "nxpod.pod.affinity" $this | indent 6 }}
+      serviceAccountName: dashboard
+      containers:
+      - name: dashboard
+        image: {{ template "nxpod.comp.imageFull" $this }}
+{{ include "nxpod.container.imagePullPolicy" $this | indent 8 }}
+{{ include "nxpod.container.resources" $this | indent 8 }}
+{{ include "nxpod.container.ports" $this | indent 8 }}
+        securityContext:
+          privileged: false
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /schemas/nxpod-schema.json
+            port: 80
+            scheme: HTTP
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+{{ include "nxpod.container.defaultEnv" $this | indent 8 }}
+{{ toYaml .Values.defaults | indent 6 }}
+{{ end }}

@@ -1,0 +1,19 @@
+{
+    "$schema": "./config-schema.json",
+    "builder": {
+        "dockerCfgFile": "/home/nxpod/.docker/config.json",
+        "nxpodLayerLoc": "/tmp/build/components-image-builder-workspace-image-layer--pack.588fcb85389f5c10ae444b52674654698f446a10/pack.tar",
+        "baseImageRepository": "eu.gcr.io/nxpod-dev/base-images",
+        "workspaceImageRepository": "eu.gcr.io/nxpod-dev/workspace-images",
+        "imageBuildSalt": "001"
+    },
+    "pprof": {
+        "address": ":9999"
+    },
+    "prometheus": {
+        "address": ":9500"
+    },
+    "service": {
+        "address": ":8080"
+    }
+}

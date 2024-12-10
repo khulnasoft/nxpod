@@ -1,0 +1,15 @@
+packages:
+  - name: pack
+    type: generic
+    srcs:
+      - "nxpod-layer/**"
+      - "scripts/**"
+    deps:
+      - components/nxpod-cli:app
+    config:
+      commands:
+        - ["mkdir", "pack"]
+        - ["mv", "components-nxpod-cli--app/nxpod-cli", "pack/nxpod-cli"]
+        - ["mv", "nxpod-layer", "scripts", "pack/"]
+        - ["rm", "-r", "components-nxpod-cli--app"]
+        - ["tar", "cvfz", "pack.tar", "-C", "pack", "."]

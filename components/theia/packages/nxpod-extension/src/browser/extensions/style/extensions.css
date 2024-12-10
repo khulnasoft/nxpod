@@ -1,0 +1,108 @@
+/**
+ * Copyright (c) 2020 TypeFox GmbH. All rights reserved.
+ * Licensed under the GNU Affero General Public License (AGPL).
+ * See License-AGPL.txt in the project root for license information.
+ */
+
+.nxpod-extension-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.nxpod-upload-extension {
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    white-space: normal;
+}
+
+.nxpod-upload-extension .link {
+    color: var(--theia-textLink-foreground);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.nxpod-upload-extension .link:hover {
+    color: var(--theia-textLink-activeForeground);
+}
+
+.nxpod-extensions-view {
+    height: 100%;
+}
+
+.nxpod-extensions-view-icon {
+    -webkit-mask: url('extensions.svg');
+    mask: url('extensions.svg');
+}
+
+.nxpod-extension {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(var(--theia-content-line-height)*3);
+    align-items: center;
+}
+
+.nxpod-extension-icon {
+    height: 42px;
+    width: 42px;
+    background-size: 42px;
+    background-repeat: no-repeat;
+    background-image: url('defaultIcon.png');
+    align-self: center;
+    padding-right: calc(var(--theia-ui-padding)*2.5);
+    flex-shrink: 0;
+}
+
+.nxpod-extension-content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 42px - var(--theia-ui-padding)*2.5);
+    line-height: calc(var(--theia-content-line-height)*17/22);
+}
+
+.nxpod-extension-name {
+    font-weight: bold;
+}
+
+.nxpod-extension-version {
+    opacity: .85;
+    font-size: 80%;
+}
+
+.nxpod-extension-description {
+    padding-right: calc(var(--theia-ui-padding)*2);
+}
+
+.nxpod-extension-publisher {
+    font-weight: 600;
+    font-size: 90%;
+}
+
+.nxpod-extension-action-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nxpod-extension-action {
+    font-size: 80%;
+    min-width: auto !important;
+    padding: 2px var(--theia-ui-padding) !important;
+    margin-top: 2px;
+}
+
+.theia-vsx-extension-editor .theia-vsx-extension-action-bar {
+    justify-content: left;
+}
+
+.theia-vsx-extension-editor .theia-vsx-extension-action-bar .action {
+    margin-left: calc(var(--theia-ui-padding)*2);
+}
+
+.theia-vsx-extension-editor .theia-vsx-extension-action-bar > :first-child {
+    margin-left: 0;
+}

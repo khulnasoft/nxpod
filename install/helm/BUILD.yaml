@@ -1,0 +1,53 @@
+# Copyright (c) 2020 TypeFox GmbH. All rights reserved.
+# Licensed under the MIT License. See License-MIT.txt in the project root for license information.
+
+packages:
+  - name: helm
+    type: generic
+    srcs:
+      - "**/*.yaml"
+      - "database/*.sql"
+      - "secrets/**/*"
+      - "config/**/*"
+      - "docs/**/*"
+      - "utils/**/*"
+      - ".helmignore"
+      - ".nxpod.yml"
+      - ".nxpod.Dockerfile"
+      - "configuration.txt"
+    deps:
+      - chart:helm
+    layout:
+      chart:helm: chart/
+    config:
+      commands:
+        # prepare chart
+        - ["sh", "-c", "ls -A | grep -v original_files | grep -v BUILD.yaml | grep -v chart/ > original_files.txt"]
+        - ["mkdir", "nxpod-selfhosted"]
+        - ["sh", "-c", "mv $(cat original_files.txt) nxpod-selfhosted"]
+        # update dependencies
+        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.yaml", "dependencies[0].repository", "file://../chart/nxpod"]
+        - ["helm", "init", "--client-only"]
+        - ["helm", "dependency", "build", "nxpod-selfhosted"]
+        # set correct repo
+        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.yaml", "dependencies[0].repository", "https://charts.nxpod.io/"]
+        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.lock", "dependencies[0].repository", "https://charts.nxpod.io/"]
+        # pack up
+        - ["helm", "package", "nxpod-selfhosted", "--destination", "."]
+        - ["rm", "-rf", "nxpod-selfhosted", "BUILD.yaml", "yq", "original_files.txt"]
+  - name: repo
+    type: generic
+    deps:
+      - chart:helm
+      - :helm
+    config:
+      commands:
+        - ["helm", "init", "--client-only"]
+        - ["mkdir", "release"]
+        - ["sh", "-c", "mv chart/nxpod-*.tgz release"]
+        - ["sh", "-c", "mv chart/nxpod-selfhosted-*.tgz release"]
+        - ["helm", "repo", "index", "release"]
+        # clean up
+        - ["mv", "release", ".release"]
+        - ["sh", "-c", "rm -r *"]
+        - ["sh", "-c", "mv .release/* ."]

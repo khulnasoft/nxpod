@@ -1,0 +1,27 @@
+# Copyright (c) 2020 TypeFox GmbH. All rights reserved.
+# Licensed under the MIT License. See License-MIT.txt in the project root for license information.
+
+nxpod:
+  components:
+    imageBuilder:
+      registryCerts: []
+      registry:
+        # name must not end with a "/"
+        name: your.registry.com/nxpod
+        secretName: image-builder-registry-secret
+        path: secrets/registry-auth.json
+
+    # server:
+    #   defaultBaseImageRegistryWhitelist:
+    #   - some.registry.domain.com
+
+    workspace:
+      pullSecret:
+        secretName: image-builder-registry-secret
+
+  docker-registry:
+    enabled: false
+
+nxpod_selfhosted:
+  variants:
+    customRegistry: true

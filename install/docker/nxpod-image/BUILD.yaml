@@ -1,0 +1,15 @@
+packages:
+  - name: docker
+    type: docker
+    srcs:
+      - entrypoint.sh
+      - nxpod-helm-installer.yaml
+      - values.yaml
+    deps:
+      - chart:helm
+    argdeps:
+      - version
+    config:
+      dockerfile: Dockerfile
+      image:
+        - ${imageRepoBase}/nxpod-k3s:${version}
