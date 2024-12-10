@@ -2,7 +2,7 @@
 // Licensed under the GNU Affero General Public License (AGPL).
 // See License-AGPL.txt in the project root for license information.
 
-// kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.io/theia.'$VERSION'": "available"}}}'
+// kubectl patch node $EXECUTING_NODE_NAME --patch '{"metadata":{"labels":{"nxpod.khulnasoft.com/theia.'$VERSION'": "available"}}}'
 
 package cmd
 
@@ -33,7 +33,7 @@ var integrationTestPatchNodesCmd = &cobra.Command{
 			log.WithError(err).Fatal("cannot list nodes")
 		}
 		for _, n := range nodes.Items {
-			n.Labels["nxpod.io/theia.wsman-test"] = "available"
+			n.Labels["nxpod.khulnasoft.com/theia.wsman-test"] = "available"
 
 			if dryRun {
 				log.WithField("node", n.Name).Info("would patch node")

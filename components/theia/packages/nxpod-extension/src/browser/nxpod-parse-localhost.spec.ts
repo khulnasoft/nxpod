@@ -428,7 +428,7 @@ export class NxpodParseLocalhostTest {
     @test()
     parseServerName(): void {
         this.assertParseLocalhost({
-            uri: 'https://nxpod.io/test',
+            uri: 'https://nxpod.khulnasoft.com/test',
             expected: undefined
         });
     }

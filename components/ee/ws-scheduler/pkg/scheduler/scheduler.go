@@ -379,8 +379,8 @@ func (s *Scheduler) gatherPotentialNodesFor(ctx context.Context, pod *corev1.Pod
 		}
 		// filter: 4: our own diskpressure signal coming from ws-manager-node.
 		//            This is not part of the label selector as labelSets cannot negate
-		//            labels. Otherwise !nxpod.io/diskPressure would be a valid selector.
-		if _, fullDisk := node.Labels["nxpod.io/diskPressure"]; fullDisk {
+		//            labels. Otherwise !nxpod.khulnasoft.com/diskPressure would be a valid selector.
+		if _, fullDisk := node.Labels["nxpod.khulnasoft.com/diskPressure"]; fullDisk {
 			continue
 		}
 

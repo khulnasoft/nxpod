@@ -1,14 +1,14 @@
 # Nxpod Self-Hosted
 
-[![Nxpod ready-to-code](https://img.shields.io/badge/Nxpod-ready--to--code-blue?logo=nxpod)](https://nxpod.io/#https://github.com/khulnasoft/self-hosted)
+[![Nxpod ready-to-code](https://img.shields.io/badge/Nxpod-ready--to--code-blue?logo=nxpod)](https://nxpod.khulnasoft.com/#https://github.com/khulnasoft/self-hosted)
 
-This repository contains the configuration templates and installation scripts to deploy Nxpod on your own infrastructure. Learn more about [Nxpod Self-Hosted](https://www.nxpod.io/docs/self-hosted/latest/self-hosted/).
+This repository contains the configuration templates and installation scripts to deploy Nxpod on your own infrastructure. Learn more about [Nxpod Self-Hosted](https://www.nxpod.khulnasoft.com/docs/self-hosted/latest/self-hosted/).
 
 ## Install on GCP
 
 If you want to deploy Nxpod Self-Hosted on Google Cloud Platform, you can start the installation process in one click:
 
-[![Open in Nxpod](https://nxpod.io/button/open-in-nxpod.svg)](https://nxpod.io/#https://github.com/khulnasoft/self-hosted)
+[![Open in Nxpod](https://nxpod.khulnasoft.com/button/open-in-nxpod.svg)](https://nxpod.khulnasoft.com/#https://github.com/khulnasoft/self-hosted)
 
 Alternatively, you can run this process locally like so:
 1. Install [Google Cloud SDK](https://cloud.google.com/sdk/install)
@@ -30,4 +30,4 @@ Coming soon.
 
 ## Install on any Kubernetes system
 
-Please see the [installation instructions for vanilla Kubernetes](https://www.nxpod.io/docs/self-hosted/latest/install/install-on-kubernetes/).
+Please see the [installation instructions for vanilla Kubernetes](https://www.nxpod.khulnasoft.com/docs/self-hosted/latest/install/install-on-kubernetes/).

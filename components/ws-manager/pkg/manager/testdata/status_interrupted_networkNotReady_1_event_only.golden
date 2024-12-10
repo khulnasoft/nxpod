@@ -10,7 +10,7 @@
         },
         "spec": {
             "workspace_image": "eu.gcr.io/nxpod-dev/workspace-images",
-            "url": "https://c0eabd01-6315-4fc4-8f60-1b008e100743.ws-eu01.nxpod.io",
+            "url": "https://c0eabd01-6315-4fc4-8f60-1b008e100743.ws-eu01.nxpod.khulnasoft.com",
             "exposed_ports": [
                 {
                     "port": 3000,

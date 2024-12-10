@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "ab451d8b-7a3a-42ec-b173-20a0e49773d4",
@@ -26,7 +26,7 @@
         "nxpod/id": "cecf2a75-7225-4056-a125-fa3144b9c012",
         "nxpod/servicePrefix": "ab451d8b-7a3a-42ec-b173-20a0e49773d4",
         "nxpod/traceid": "AAAAAAAAAAAM301AkX9Ux31i87+V14iHERCWZtjrhxYBAAAAAA==",
-        "nxpod/url": "https://ab451d8b-7a3a-42ec-b173-20a0e49773d4.ws-eu01.nxpod.io",
+        "nxpod/url": "https://ab451d8b-7a3a-42ec-b173-20a0e49773d4.ws-eu01.nxpod.khulnasoft.com",
         "nxpod/never-ready": "true",
         "kubernetes.io/psp": "default-ns-workspace",
         "prometheus.io/path": "/metrics",
@@ -152,15 +152,15 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/theia.hotfix-2020-02-08.0",
+                    "key": "nxpod.khulnasoft.com/theia.hotfix-2020-02-08.0",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"

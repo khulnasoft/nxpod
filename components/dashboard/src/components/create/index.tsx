@@ -51,7 +51,7 @@ export async function start(Component: React.ComponentType<CreateWorkspaceProps>
     const contextUrl = getContextUrl();
     const service = createNxpodService();
     if (contextUrl === undefined || contextUrl === '') {
-        // opening nxpod.io without context and no login
+        // opening nxpod.khulnasoft.com without context and no login
         // should eagerly forward to website
         if (!document.cookie.match("nxpod-user=loggedIn")) {
             return redirectNotAuthenticated(service);
@@ -77,7 +77,7 @@ export async function start(Component: React.ComponentType<CreateWorkspaceProps>
     } else {
         const showWelcomeEnabled = window.location.hostname.includes('nxpod');
 
-        // opening nxpod.io with a context and no login
+        // opening nxpod.khulnasoft.com with a context and no login
         // forward to welcome page
         if (!document.cookie.match("nxpod-user=loggedIn") && showWelcomeEnabled) {
             await showWelcome(contextUrl);

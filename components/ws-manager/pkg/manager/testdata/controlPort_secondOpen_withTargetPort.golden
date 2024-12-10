@@ -10,8 +10,8 @@
             },
             "annotations": {
                 "nxpod/ingressPorts": "{\"3000\":{\"workspacePort\":3000,\"ingressPort\":10847},\"8080\":{\"workspacePort\":8080,\"ingressPort\":10059}}",
-                "nxpod/port-url-3000": "nxpod.io:10847",
-                "nxpod/port-url-8080": "nxpod.io:10059"
+                "nxpod/port-url-3000": "nxpod.khulnasoft.com:10847",
+                "nxpod/port-url-8080": "nxpod.khulnasoft.com:10059"
             }
         },
         "spec": {
@@ -44,13 +44,13 @@
         {
             "port": 3000,
             "visibility": 1,
-            "url": "nxpod.io:10847"
+            "url": "nxpod.khulnasoft.com:10847"
         },
         {
             "port": 8080,
             "target": 38080,
             "visibility": 1,
-            "url": "nxpod.io:10059"
+            "url": "nxpod.khulnasoft.com:10059"
         }
     ]
 }

@@ -30,8 +30,8 @@ packages:
         - ["helm", "init", "--client-only"]
         - ["helm", "dependency", "build", "nxpod-selfhosted"]
         # set correct repo
-        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.yaml", "dependencies[0].repository", "https://charts.nxpod.io/"]
-        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.lock", "dependencies[0].repository", "https://charts.nxpod.io/"]
+        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.yaml", "dependencies[0].repository", "https://charts.nxpod.khulnasoft.com/"]
+        - ["yq", "w", "-i", "nxpod-selfhosted/requirements.lock", "dependencies[0].repository", "https://charts.nxpod.khulnasoft.com/"]
         # pack up
         - ["helm", "package", "nxpod-selfhosted", "--destination", "."]
         - ["rm", "-rf", "nxpod-selfhosted", "BUILD.yaml", "yq", "original_files.txt"]

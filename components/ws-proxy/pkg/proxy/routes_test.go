@@ -72,7 +72,7 @@ func TestRoutes(t *testing.T) {
 			StaticVersionPathPrefix: "/test-version.1234",
 		},
 		NxpodInstallation: &NxpodInstallation{
-			HostName:            "nxpod.io",
+			HostName:            "nxpod.khulnasoft.com",
 			Scheme:              "https",
 			WorkspaceHostSuffix: "",
 		},

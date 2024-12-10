@@ -47,8 +47,8 @@ export interface CreateWorkspaceError {
 
 export async function getWayoutURL(service: NxpodService): Promise<string> {
     let target: string;
-    if (window.location.href.includes("nxpod.io")) {
-        target = 'https://www.nxpod.io';
+    if (window.location.href.includes("nxpod.khulnasoft.com")) {
+        target = 'https://www.nxpod.khulnasoft.com';
     } else {
         target = '/workspaces/';
     }

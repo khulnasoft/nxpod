@@ -38,10 +38,10 @@ import (
 
 const (
 	// LabelProtected is applied to images/volumes/containers which must not be pruned
-	LabelProtected = "nxpod.io/image-builder/protected"
+	LabelProtected = "nxpod.khulnasoft.com/image-builder/protected"
 
 	// LabelTemporary is applied to images/volumes/containers which can be pruned post-build
-	LabelTemporary = "nxpod.io/image-builder/temporary"
+	LabelTemporary = "nxpod.khulnasoft.com/image-builder/temporary"
 
 	// maxBuildRuntime is the maximum time a build is allowed to take
 	maxBuildRuntime = 60 * time.Minute
@@ -97,7 +97,7 @@ func (b *DockerBuilder) Start(ctx context.Context) (err error) {
 	log.WithField("nxpodLayer", b.Config.NxpodLayerLoc).WithField("hash", b.gplayerHash).Info("computed Nxpod layer hash")
 
 	log.WithField("nxpodLayer", b.Config.NxpodLayerLoc).Info("running self-build")
-	ref, err := SelfBuild(ctx, "nxpod.io/image-builder/selfbuild", b.Config.NxpodLayerLoc, b.Docker)
+	ref, err := SelfBuild(ctx, "nxpod.khulnasoft.com/image-builder/selfbuild", b.Config.NxpodLayerLoc, b.Docker)
 	if err != nil {
 		log.WithError(err).Error("self-build failed")
 		return err

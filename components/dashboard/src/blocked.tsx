@@ -15,7 +15,7 @@ export class Blocked extends React.Component<{}, {}> {
 		return (
             <div className="blocked">
                 <h1 className="heading">Your account has been blocked.</h1>
-                <div className="text">If you have questions please <a href="mailto:support@nxpod.io?Subject=Blocked" target="_top">contact us</a>.</div>
+                <div className="text">If you have questions please <a href="mailto:support@nxpod.khulnasoft.com?Subject=Blocked" target="_top">contact us</a>.</div>
             </div>
 		);
 	}

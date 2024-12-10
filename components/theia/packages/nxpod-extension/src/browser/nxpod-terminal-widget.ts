@@ -110,8 +110,8 @@ export namespace NxpodTerminalWidget {
         if (url.hostname === 'localhost' ||
             url.hostname === '127.0.0.1' ||
             url.hostname === '0.0.0.0') {
-            // We are currently at: <wsid>.ws.nxpod.io/
-            // Port available under: <port>-<wsid>.ws.nxpod.io/...
+            // We are currently at: <wsid>.ws.nxpod.khulnasoft.com/
+            // Port available under: <port>-<wsid>.ws.nxpod.khulnasoft.com/...
             url.hostname = `${determineTargetPort(url)}-${window.location.hostname}`;
             url.protocol = window.location.protocol;
             url.port = determineTargetPort(window.location);

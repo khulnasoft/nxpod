@@ -10,7 +10,7 @@
             },
             "annotations": {
                 "nxpod/ingressPorts": "",
-                "nxpod/port-url-3000": "3000--servicePrefix-nxpod.io"
+                "nxpod/port-url-3000": "3000--servicePrefix-nxpod.khulnasoft.com"
             }
         },
         "spec": {
@@ -36,7 +36,7 @@
     "postChangeStatus": [
         {
             "port": 3000,
-            "url": "3000--servicePrefix-nxpod.io"
+            "url": "3000--servicePrefix-nxpod.khulnasoft.com"
         }
     ]
 }

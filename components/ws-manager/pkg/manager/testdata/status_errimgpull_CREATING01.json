@@ -12,7 +12,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "f29012c4-c6b9-4bd1-9c48-151bdeec6940",
@@ -52,7 +52,7 @@
       "containers": [
         {
           "name": "workspace",
-          "image": "reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest",
+          "image": "reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest",
           "ports": [
             {
               "containerPort": 23000,
@@ -215,11 +215,11 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"
@@ -314,7 +314,7 @@
           "state": {
             "waiting": {
               "reason": "ImagePullBackOff",
-              "message": "Back-off pulling image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\""
+              "message": "Back-off pulling image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\""
             }
           },
           "lastState": {
@@ -326,7 +326,7 @@
           },
           "ready": false,
           "restartCount": 0,
-          "image": "reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest",
+          "image": "reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest",
           "imageID": ""
         }
       ],
@@ -382,7 +382,7 @@
         "fieldPath": "spec.containers{workspace}"
       },
       "reason": "Pulling",
-      "message": "Pulling image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
+      "message": "Pulling image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
       "source": {
         "component": "kubelet",
         "host": "gke-nxpod-dev-worker-pool-1-f039fa9e-2jrb"
@@ -414,7 +414,7 @@
         "fieldPath": "spec.containers{workspace}"
       },
       "reason": "Failed",
-      "message": "Failed to pull image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\": rpc error: code = Unknown desc = failed to resolve image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\": no available registry endpoint: failed to do request: Head https://reg.nxpod.io:227/v2/c/pmrgeir2ejsxklthmnzc42lpf5tws5dqn5sc2zdfoyxxo33snnzxayldmuwws3lbm5sxgorrme4toodcmjrtanrrgyzdszlbmyydeojyme3gmztemu4gkojuga2wmm3eguydgnbzmvswcmrrmuytcnrqmzsdcn3fgfqwmzlghfrtkit5/manifests/latest: net/http: TLS handshake timeout",
+      "message": "Failed to pull image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\": rpc error: code = Unknown desc = failed to resolve image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\": no available registry endpoint: failed to do request: Head https://reg.nxpod.khulnasoft.com:227/v2/c/pmrgeir2ejsxklthmnzc42lpf5tws5dqn5sc2zdfoyxxo33snnzxayldmuwws3lbm5sxgorrme4toodcmjrtanrrgyzdszlbmyydeojyme3gmztemu4gkojuga2wmm3eguydgnbzmvswcmrrmuytcnrqmzsdcn3fgfqwmzlghfrtkit5/manifests/latest: net/http: TLS handshake timeout",
       "source": {
         "component": "kubelet",
         "host": "gke-nxpod-dev-worker-pool-1-f039fa9e-2jrb"
@@ -478,7 +478,7 @@
         "fieldPath": "spec.containers{workspace}"
       },
       "reason": "BackOff",
-      "message": "Back-off pulling image \"reg.nxpod.io:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
+      "message": "Back-off pulling image \"reg.nxpod.khulnasoft.com:227/i/79be1e8b-a6de-4572-8627-99ef12303a88:latest\"",
       "source": {
         "component": "kubelet",
         "host": "gke-nxpod-dev-worker-pool-1-f039fa9e-2jrb"

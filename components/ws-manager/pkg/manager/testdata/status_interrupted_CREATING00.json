@@ -10,7 +10,7 @@
       "labels": {
         "app": "nxpod",
         "component": "workspace",
-        "nxpod.io/networkpolicy": "default",
+        "nxpod.khulnasoft.com/networkpolicy": "default",
         "gpwsman": "true",
         "headless": "false",
         "metaID": "f75a430d-331d-4977-a4dc-16939c0752e1",
@@ -24,7 +24,7 @@
         "nxpod/id": "4bf2e82d-cdc7-4764-b8ad-6973e3c4a629",
         "nxpod/ready": "true",
         "nxpod/servicePrefix": "f75a430d-331d-4977-a4dc-16939c0752e1",
-        "nxpod/url": "http://f75a430d-331d-4977-a4dc-16939c0752e1.ws-eu.cw-gh-2720.staging.nxpod.io",
+        "nxpod/url": "http://f75a430d-331d-4977-a4dc-16939c0752e1.ws-eu.cw-gh-2720.staging.nxpod.khulnasoft.com",
         "prometheus.io/path": "/metrics",
         "prometheus.io/port": "23000",
         "prometheus.io/scrape": "true"
@@ -84,11 +84,11 @@
             },
             {
               "name": "NXPOD_HOST",
-              "value": "http://cw-gh-2720.staging.nxpod.io"
+              "value": "http://cw-gh-2720.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_WORKSPACE_URL",
-              "value": "http://f75a430d-331d-4977-a4dc-16939c0752e1.ws-eu.cw-gh-2720.staging.nxpod.io"
+              "value": "http://f75a430d-331d-4977-a4dc-16939c0752e1.ws-eu.cw-gh-2720.staging.nxpod.khulnasoft.com"
             },
             {
               "name": "NXPOD_GIT_USER_NAME",
@@ -208,15 +208,15 @@
               {
                 "matchExpressions": [
                   {
-                    "key": "nxpod.io/theia.cw-gh-2720.5",
+                    "key": "nxpod.khulnasoft.com/theia.cw-gh-2720.5",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/ws-sync",
+                    "key": "nxpod.khulnasoft.com/ws-sync",
                     "operator": "Exists"
                   },
                   {
-                    "key": "nxpod.io/workload_workspace",
+                    "key": "nxpod.khulnasoft.com/workload_workspace",
                     "operator": "In",
                     "values": [
                       "true"

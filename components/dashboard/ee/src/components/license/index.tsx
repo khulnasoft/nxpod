@@ -126,9 +126,9 @@ export class License extends React.Component<LicenseProps, LicenseState> {
         const { user } = this.state;
         const domain = window.location.hostname;
         const userEmail = user && user.identities.map(i => i.primaryEmail).filter(email => !!email)[0];
-        const enterpricseLicenseUrl = `https://www.nxpod.io/enterprise-license?domain=${domain}&userEmail=${userEmail}`;
+        const enterpricseLicenseUrl = `https://www.nxpod.khulnasoft.com/enterprise-license?domain=${domain}&userEmail=${userEmail}`;
 
-        return (<p>You can obtain a license key from <a href={enterpricseLicenseUrl} target="_blank">nxpod.io/enterprise-license</a></p>);
+        return (<p>You can obtain a license key from <a href={enterpricseLicenseUrl} target="_blank">nxpod.khulnasoft.com/enterprise-license</a></p>);
     }
 
     protected renderTextCell = (text: string) => (<Typography style={{ margin: "10px", display: "inline-block" }}>

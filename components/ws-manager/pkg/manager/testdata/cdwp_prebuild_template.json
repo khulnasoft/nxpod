@@ -35,7 +35,7 @@
                             {
                                 "matchExpressions": [
                                     {
-                                        "key": "nxpod.io/workload_prebuild",
+                                        "key": "nxpod.khulnasoft.com/workload_prebuild",
                                         "operator": "In",
                                         "values": [
                                             "true"

@@ -17,7 +17,7 @@ affinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
       - matchExpressions:
-        - key: nxpod.io/workload_meta
+        - key: nxpod.khulnasoft.com/workload_meta
           operator: In
           values:
           - "true"
@@ -43,7 +43,7 @@ components:
     pullSecret:
       secretName: gcp-sa-registry-auth
     affinity:
-      default: "nxpod.io/workload_workspace"
+      default: "nxpod.khulnasoft.com/workload_workspace"
     templates:
       default:
         spec:

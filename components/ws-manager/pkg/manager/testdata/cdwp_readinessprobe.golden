@@ -6,7 +6,7 @@
             "labels": {
                 "app": "nxpod",
                 "component": "workspace",
-                "nxpod.io/networkpolicy": "default",
+                "nxpod.khulnasoft.com/networkpolicy": "default",
                 "gpwsman": "true",
                 "headless": "false",
                 "metaID": "foobar",
@@ -22,7 +22,7 @@
                 "nxpod/ownerToken": "%7J'[Of/8NDiWE+9F,I6^Jcj_1\u0026}-F8p",
                 "nxpod/servicePrefix": "foobarservice",
                 "nxpod/traceid": "",
-                "nxpod/url": "test-foobarservice-nxpod.io",
+                "nxpod/url": "test-foobarservice-nxpod.khulnasoft.com",
                 "prometheus.io/path": "/metrics",
                 "prometheus.io/port": "23000",
                 "prometheus.io/scrape": "true"
@@ -81,11 +81,11 @@
                         },
                         {
                             "name": "NXPOD_HOST",
-                            "value": "nxpod.io"
+                            "value": "nxpod.khulnasoft.com"
                         },
                         {
                             "name": "NXPOD_WORKSPACE_URL",
-                            "value": "test-foobarservice-nxpod.io"
+                            "value": "test-foobarservice-nxpod.khulnasoft.com"
                         },
                         {
                             "name": "THEIA_SUPERVISOR_ENDPOINT",
@@ -190,11 +190,11 @@
                             {
                                 "matchExpressions": [
                                     {
-                                        "key": "nxpod.io/theia.foobar",
+                                        "key": "nxpod.khulnasoft.com/theia.foobar",
                                         "operator": "Exists"
                                     },
                                     {
-                                        "key": "nxpod.io/ws-sync",
+                                        "key": "nxpod.khulnasoft.com/ws-sync",
                                         "operator": "Exists"
                                     }
                                 ]
