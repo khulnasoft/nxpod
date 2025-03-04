@@ -27,7 +27,7 @@
     "@nxpod/nxpod-protocol": "0.1.5",
     "mysql": "^2.15.0",
     "reflect-metadata": "^0.1.10",
-    "typeorm": "0.1.20",
+    "typeorm": "0.3.0",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
